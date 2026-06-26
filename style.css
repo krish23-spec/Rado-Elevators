@@ -299,60 +299,6 @@ border:none;
 
 }
 
-/* ═══════════════════════════════
-   FLOATING BUTTONS
-═══════════════════════════════ */
-.float-btn {
-  position: fixed;
-  z-index: 900;
-  border: none;
-  cursor: pointer;
-  border-radius: 50px;
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  padding: 0.8rem 1.2rem;
-  font-family: 'Montserrat', sans-serif;
-  font-size: 0.75rem;
-  font-weight: 700;
-  letter-spacing: 0.06em;
-  box-shadow: 0 4px 20px rgba(0,0,0,0.4);
-  transition: transform var(--transition), box-shadow var(--transition);
-}
-.float-btn:hover { transform: translateY(-3px); box-shadow: 0 8px 30px rgba(0,0,0,0.5); }
-.float-wa {
-  bottom: 2rem; right: 2rem;
-  background: #25D366;
-  color: #fff;
-  animation: waBounce 5s infinite;
-}
-.float-call {
-  bottom: 2rem; left: 2rem;
-  background: var(--crimson);
-  color: #fff;
-}
-@keyframes waBounce {
-  0%,90%,100% { transform: translateY(0); }
-  94% { transform: translateY(-6px); }
-  97% { transform: translateY(-3px); }
-}
-.float-quote-mobile {
-  display: none;
-  bottom: 2rem; left: 50%; transform: translateX(-50%);
-  background: var(--gold);
-  color: var(--dark-bg);
-  white-space: nowrap;
-  /* left:16px; */
-  width:auto;
-  /* height:48px; */
-  border-radius:28px;
-  font-size:15px;
-  font-weight:700;
-  right:16px;
-
-}
-
-
 
 /* ═══════════════════════════════
    BACK TO TOP
