@@ -1,0 +1,255 @@
+/* ===========================
+   SERVICES PAGE RESPONSIVE
+=========================== */
+
+.modern-stats{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:1rem;
+}
+
+@media(max-width:768px){
+    .modern-stats{
+        grid-template-columns:1fr;
+    }
+}
+/* Laptop */
+@media (max-width:1200px){
+
+.service-layout{
+    gap:2.5rem;
+}
+
+.amc-grid{
+    gap:1rem;
+}
+
+.amc-card{
+    padding:2rem 1.4rem;
+}
+
+}
+
+
+/* Tablet */
+@media (max-width:992px){
+
+.service-section{
+    padding:5rem 0;
+}
+
+.service-layout,
+.service-layout.reverse{
+    grid-template-columns:1fr;
+    direction:ltr;
+    gap:3rem;
+}
+
+.service-img-box,
+.comparison-container{
+    height:350px;
+}
+
+.amc-grid{
+    grid-template-columns:1fr;
+}
+
+.amc-card.featured{
+    transform:none;
+}
+
+.amc-card:hover{
+    transform:translateY(-5px);
+}
+
+.amc-card.featured:hover{
+    transform:translateY(-5px);
+}
+
+.repair-issues{
+    grid-template-columns:1fr 1fr;
+}
+
+.install-step{
+    min-width:110px;
+}
+
+}
+
+
+/* Mobile */
+@media (max-width:768px){
+
+.service-section{
+    padding:4rem 0;
+}
+
+.service-layout{
+    gap:2rem;
+}
+
+.section-heading{
+    font-size:1.8rem !important;
+    line-height:1.3;
+}
+
+.service-img-box,
+.comparison-container{
+    height:280px;
+}
+
+.install-steps{
+    overflow-x:auto;
+    padding-bottom:15px;
+}
+
+.install-step{
+    min-width:90px;
+}
+
+.install-step::after{
+    top:18px;
+}
+
+.step-num{
+    width:34px;
+    height:34px;
+    font-size:.75rem;
+}
+
+.step-label{
+    font-size:.65rem;
+}
+
+.amc-price{
+    font-size:2rem;
+}
+
+.emergency-number{
+    font-size:2rem;
+}
+
+.repair-issues{
+    grid-template-columns:1fr;
+}
+
+div[style*="grid-template-columns:1fr 1fr 1fr"]{
+    grid-template-columns:1fr !important;
+}
+
+.comparison-label{
+    font-size:.55rem;
+}
+
+}
+
+
+/* Small Mobile */
+@media (max-width:576px){
+
+.service-section{
+    padding:3rem 0;
+}
+
+.service-img-box,
+.comparison-container{
+    height:220px;
+}
+
+.amc-card{
+    padding:1.6rem;
+}
+
+.amc-price{
+    font-size:1.8rem;
+}
+
+.amc-features li{
+    font-size:.8rem;
+}
+
+.emergency-cta{
+    padding:1.5rem;
+}
+
+.emergency-number{
+    font-size:1.6rem;
+}
+
+.pulse-btn{
+    width:100%;
+    justify-content:center;
+}
+
+.repair-issue{
+    font-size:.8rem;
+}
+
+button{
+    width:100%;
+}
+
+}
+
+@media (max-width:768px){
+
+.install-steps{
+
+    grid-template-columns:repeat(2,1fr);
+
+    gap:20px;
+
+}
+
+.install-step{
+
+    min-width:unset;
+
+}
+
+.install-step::after{
+
+    display:none;
+
+}
+
+.step-num{
+
+    margin-bottom:10px;
+
+}
+
+}
+
+@media (max-width:480px){
+
+.install-steps{
+
+    grid-template-columns:1fr;
+
+}
+
+}
+
+.float-call,
+.float-wa{
+    bottom:78px;
+    width:120px;
+    height:46px;
+    border-radius:30px;
+    font-size:14px;
+    font-weight:600;
+}
+
+.float-call{
+    left:16px;
+}
+
+.float-wa{
+    right:16px;
+}
+
+.float-call i,
+.float-wa i{
+    font-size:16px;
+}
