@@ -1,0 +1,3482 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Rado Elevators | Elevator Installation, AMC &amp; Repair India</title>
+<meta name="description" content="Rado Elevators — India's trusted elevator partner for installation, AMC, modernization and 24/7 repairs. 500+ projects, 15+ years, 50+ cities.">
+<meta property="og:title" content="Rado Elevators | Where Safety Meets Innovation">
+<meta property="og:description" content="Premium elevator installation, maintenance and modernization across India.">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;800&family=Inter:wght@300;400;500;600&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+<link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css">
+
+<style>
+/* ═══════════════════════════════
+   CSS CUSTOM PROPERTIES
+═══════════════════════════════ */
+:root {
+  --crimson: #8B1A1A;
+  --accent: #C41E3A;
+  --dark-bg: #0F0F1A;
+  --gold: #C9A84C;
+  --light-bg: #F8F5F0;
+  --white: #FFFFFF;
+  --gray-text: #9CA3AF;
+  --border: rgba(255,255,255,0.08);
+  --transition: 0.3s ease;
+  --shadow-card: 0 8px 32px rgba(0,0,0,0.18);
+  --shadow-hover: 0 20px 60px rgba(0,0,0,0.28);
+  --max-width: 1320px;
+}
+
+/* ═══════════════════════════════
+   RESET & BASE
+═══════════════════════════════ */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; font-size: 16px; }
+body {
+  font-family: 'Inter', sans-serif;
+  background: var(--dark-bg);
+  color: var(--white);
+  overflow-x: hidden;
+  line-height: 1.6;
+}
+img { max-width: 100%; height: auto; display: block; }
+a { text-decoration: none; color: inherit; }
+ul { list-style: none; }
+button, input, select, textarea { font-family: inherit; }
+:focus-visible { outline: 2px solid var(--gold); outline-offset: 3px; }
+
+/* ═══════════════════════════════
+   TYPOGRAPHY
+═══════════════════════════════ */
+h1,h2,h3,h4,h5 { font-family: 'Playfair Display', serif; line-height: 1.2; }
+.eyebrow {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--gold);
+  display: block;
+  margin-bottom: 0.75rem;
+}
+.container { max-width: var(--max-width); margin: 0 auto; padding: 0 2rem; }
+.section-heading {
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+.section-sub { color: var(--gray-text); font-size: 1.05rem; max-width: 560px; }
+
+/* ═══════════════════════════════
+   PRELOADER / ELEVATOR DOOR ANIMATION
+═══════════════════════════════ */
+#preloader {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  pointer-events: none;
+}
+.door-left, .door-right {
+  position: absolute;
+  top: 0;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(135deg, #111118 0%, #1a1a2e 50%, #0f0f1a 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 1.8s cubic-bezier(0.77,0,0.175,1);
+  z-index: 2;
+}
+.door-left {
+  left: 0;
+  border-right: 2px solid rgba(201,168,76,0.3);
+  background-image: repeating-linear-gradient(90deg, transparent, transparent 40px, rgba(255,255,255,0.02) 40px, rgba(255,255,255,0.02) 41px);
+}
+.door-right {
+  right: 0;
+  border-left: 2px solid rgba(201,168,76,0.3);
+  background-image: repeating-linear-gradient(90deg, transparent, transparent 40px, rgba(255,255,255,0.02) 40px, rgba(255,255,255,0.02) 41px);
+}
+.door-logo {
+  text-align: center;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 3;
+  pointer-events: none;
+}
+.door-logo .logo-r {
+  font-family: 'Playfair Display', serif;
+  font-size: 5rem;
+  font-weight: 800;
+  color: var(--gold);
+  display: block;
+  line-height: 1;
+  text-shadow: 0 0 60px rgba(201,168,76,0.5);
+}
+.door-logo .logo-name {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.1rem;
+  font-weight: 700;
+  letter-spacing: 0.5em;
+  color: var(--white);
+  margin-top: 0.3rem;
+}
+.door-logo .logo-tag {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.55rem;
+  letter-spacing: 0.2em;
+  color: var(--gray-text);
+  margin-top: 0.4rem;
+}
+.doors-open .door-left { transform: translateX(-100%); }
+.doors-open .door-right { transform: translateX(100%); }
+.doors-open .door-logo { opacity: 0; transition: opacity 0.5s ease; }
+
+/* ═══════════════════════════════
+   PAGE SYSTEM
+═══════════════════════════════ */
+.page { display: none; }
+.page.active { display: block; }
+
+/* ═══════════════════════════════
+   NAVBAR
+═══════════════════════════════ */
+#navbar {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  z-index: 1000;
+  transition: background var(--transition), box-shadow var(--transition);
+  padding: 1.2rem 0;
+}
+#navbar.scrolled {
+  background: rgba(15,15,26,0.92);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  box-shadow: 0 2px 24px rgba(0,0,0,0.4);
+  padding: 0.8rem 0;
+}
+.nav-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.nav-logo {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  cursor: pointer;
+}
+.nav-logo .logo-mark {
+  width: 42px; height: 42px;
+  background: var(--crimson);
+  border-radius: 4px;
+  display: flex; align-items: center; justify-content: center;
+  font-family: 'Playfair Display', serif;
+  font-weight: 800;
+  font-size: 1.5rem;
+  color: var(--gold);
+}
+.nav-logo .logo-text { display: flex; flex-direction: column; }
+.nav-logo .logo-name-nav {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  font-size: 1rem;
+  letter-spacing: 0.12em;
+  line-height: 1;
+}
+.nav-logo .logo-sub-nav {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.45rem;
+  letter-spacing: 0.2em;
+  color: var(--gold);
+}
+.nav-links {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+}
+.nav-links a {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.8);
+  transition: color var(--transition);
+  cursor: pointer;
+  position: relative;
+}
+.nav-links a::after {
+  content: '';
+  position: absolute;
+  bottom: -4px; left: 0;
+  width: 0; height: 2px;
+  background: var(--gold);
+  transition: width var(--transition);
+}
+.nav-links a:hover, .nav-links a.active { color: var(--white); }
+.nav-links a:hover::after, .nav-links a.active::after { width: 100%; }
+.nav-cta {
+  background: var(--crimson);
+  color: var(--white) !important;
+  padding: 0.65rem 1.4rem;
+  border-radius: 4px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  cursor: pointer;
+  border: none;
+  transition: background var(--transition), transform var(--transition);
+}
+.nav-cta:hover { background: var(--accent); transform: translateY(-2px); }
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+  padding: 4px;
+}
+.hamburger span {
+  display: block;
+  width: 26px; height: 2px;
+  background: var(--white);
+  transition: var(--transition);
+}
+/* Mobile drawer */
+.mobile-drawer {
+  position: fixed;
+  top: 0; right: -100%;
+  width: 280px; height: 100vh;
+  background: var(--dark-bg);
+  z-index: 1100;
+  transition: right 0.35s cubic-bezier(0.77,0,0.175,1);
+  padding: 2rem;
+  box-shadow: -8px 0 40px rgba(0,0,0,0.5);
+  border-left: 1px solid var(--border);
+}
+.mobile-drawer.open { right: 0; }
+.drawer-close {
+  position: absolute;
+  top: 1.5rem; right: 1.5rem;
+  background: none; border: none;
+  color: var(--white); font-size: 1.5rem;
+  cursor: pointer;
+}
+.drawer-links {
+  margin-top: 4rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.drawer-links a {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 0.8rem 0;
+  border-bottom: 1px solid var(--border);
+  color: rgba(255,255,255,0.8);
+  cursor: pointer;
+}
+.drawer-links a:hover { color: var(--gold); }
+.drawer-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.5);
+  z-index: 1050;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity var(--transition);
+}
+.drawer-overlay.show { opacity: 1; pointer-events: all; }
+
+/* ═══════════════════════════════
+   FLOATING BUTTONS
+═══════════════════════════════ */
+.float-btn {
+  position: fixed;
+  z-index: 900;
+  border: none;
+  cursor: pointer;
+  border-radius: 50px;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.8rem 1.2rem;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.4);
+  transition: transform var(--transition), box-shadow var(--transition);
+}
+.float-btn:hover { transform: translateY(-3px); box-shadow: 0 8px 30px rgba(0,0,0,0.5); }
+.float-wa {
+  bottom: 2rem; right: 2rem;
+  background: #25D366;
+  color: #fff;
+  animation: waBounce 5s infinite;
+}
+.float-call {
+  bottom: 2rem; left: 2rem;
+  background: var(--crimson);
+  color: #fff;
+}
+@keyframes waBounce {
+  0%,90%,100% { transform: translateY(0); }
+  94% { transform: translateY(-6px); }
+  97% { transform: translateY(-3px); }
+}
+.float-quote-mobile {
+  display: none;
+  bottom: 2rem; left: 50%; transform: translateX(-50%);
+  background: var(--gold);
+  color: var(--dark-bg);
+  white-space: nowrap;
+}
+
+/* ═══════════════════════════════
+   BACK TO TOP
+═══════════════════════════════ */
+#backToTop {
+  position: fixed;
+  bottom: 7rem; right: 2rem;
+  width: 44px; height: 44px;
+  background: var(--crimson);
+  border: none;
+  border-radius: 4px;
+  color: #fff;
+  font-size: 1rem;
+  cursor: pointer;
+  z-index: 890;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity var(--transition), transform var(--transition);
+  display: flex; align-items: center; justify-content: center;
+}
+#backToTop.visible { opacity: 1; transform: translateY(0); }
+#backToTop:hover { background: var(--accent); }
+
+/* ═══════════════════════════════
+   BUTTONS
+═══════════════════════════════ */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.9rem 1.8rem;
+  border-radius: 4px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  cursor: pointer;
+  border: none;
+  transition: all var(--transition);
+}
+.btn-primary { background: var(--crimson); color: #fff; }
+.btn-primary:hover { background: var(--accent); transform: translateY(-2px); box-shadow: 0 8px 24px rgba(196,30,58,0.4); }
+.btn-outline { background: transparent; color: #fff; border: 2px solid rgba(255,255,255,0.5); }
+.btn-outline:hover { border-color: #fff; background: rgba(255,255,255,0.08); transform: translateY(-2px); }
+.btn-gold { background: var(--gold); color: var(--dark-bg); }
+.btn-gold:hover { background: #d4b060; transform: translateY(-2px); }
+.btn-wa { background: #25D366; color: #fff; }
+.btn-wa:hover { background: #20bd5a; transform: translateY(-2px); }
+.btn-lg { padding: 1.1rem 2.2rem; font-size: 0.82rem; }
+
+/* ═══════════════════════════════
+   SECTIONS SHARED
+═══════════════════════════════ */
+.section-pad { padding: 6rem 0; }
+.section-pad-sm { padding: 4rem 0; }
+.bg-dark { background: var(--dark-bg); }
+.bg-light { background: var(--light-bg); color: var(--dark-bg); }
+.bg-light .section-sub { color: #555; }
+.bg-light .eyebrow { color: var(--crimson); }
+.text-center { text-align: center; }
+.text-gold { color: var(--gold); }
+.divider-line {
+  width: 60px; height: 3px;
+  background: var(--gold);
+  margin: 1rem 0 2rem;
+}
+.divider-line.center { margin: 1rem auto 2rem; }
+
+/* ═══════════════════════════════
+   PAGE HERO BANNER (inner pages)
+═══════════════════════════════ */
+.page-hero {
+  min-height: 320px;
+  display: flex;
+  align-items: center;
+  padding-top: 100px;
+  position: relative;
+  overflow: hidden;
+}
+.page-hero-bg {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, var(--dark-bg) 0%, #1a0a0a 100%);
+  background-image: repeating-linear-gradient(
+    90deg, transparent, transparent 60px,
+    rgba(255,255,255,0.015) 60px, rgba(255,255,255,0.015) 61px
+  ), repeating-linear-gradient(
+    0deg, transparent, transparent 60px,
+    rgba(255,255,255,0.015) 60px, rgba(255,255,255,0.015) 61px
+  );
+}
+.page-hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, rgba(139,26,26,0.4) 0%, transparent 60%);
+}
+.page-hero-content { position: relative; z-index: 2; }
+.page-hero h1 {
+  font-size: clamp(2.2rem, 5vw, 3.5rem);
+  font-weight: 800;
+  margin-bottom: 0.5rem;
+}
+.page-hero p { color: rgba(255,255,255,0.65); font-size: 1.05rem; max-width: 500px; }
+
+/* ════════════════════════════════════════
+   HOME PAGE
+════════════════════════════════════════ */
+
+/* Hero Section */
+.hero {
+  min-height: 100vh;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  padding-top: 80px;
+}
+.hero-bg {
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(180deg, rgba(15,15,26,0.4) 0%, rgba(15,15,26,0.7) 60%, var(--dark-bg) 100%),
+    url('https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=1800&q=80&auto=format') center/cover no-repeat;
+  animation: kenBurns 20s ease-in-out infinite alternate;
+}
+@keyframes kenBurns {
+  0% { transform: scale(1); }
+  100% { transform: scale(1.08); }
+}
+.hero-glow {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse at 10% 50%, rgba(139,26,26,0.25) 0%, transparent 60%);
+  pointer-events: none;
+}
+.hero-content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  max-width: 820px;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s ease 1.8s, transform 0.8s ease 1.8s;
+}
+.hero-content.visible { opacity: 1; transform: translateY(0); }
+.hero h1 {
+  font-size: clamp(2.6rem, 6vw, 4.4rem);
+  font-weight: 800;
+  line-height: 1.12;
+  margin-bottom: 1.2rem;
+  text-shadow: 0 2px 20px rgba(0,0,0,0.5);
+}
+.hero-sub {
+  font-size: 1.05rem;
+  color: rgba(255,255,255,0.75);
+  margin-bottom: 2.2rem;
+  letter-spacing: 0.03em;
+}
+.hero-btns { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
+.scroll-indicator {
+  position: absolute;
+  bottom: 2.5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.4rem;
+  opacity: 0.6;
+  animation: bounce 2s infinite;
+}
+.scroll-indicator span {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.6rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+}
+.scroll-indicator i { font-size: 1.1rem; }
+@keyframes bounce {
+  0%,100% { transform: translateX(-50%) translateY(0); }
+  50% { transform: translateX(-50%) translateY(8px); }
+}
+/* Particles */
+#particles-canvas {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* Stats Bar */
+.stats-bar {
+  background: #0a0a14;
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+  padding: 3rem 0;
+}
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0;
+}
+.stat-item {
+  text-align: center;
+  padding: 1rem 2rem;
+  border-right: 1px solid rgba(255,255,255,0.08);
+}
+.stat-item:last-child { border-right: none; }
+.stat-number {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(2.5rem, 4vw, 3.5rem);
+  font-weight: 800;
+  color: var(--gold);
+  line-height: 1;
+  display: block;
+}
+.stat-label {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.65rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.5);
+  margin-top: 0.5rem;
+  display: block;
+}
+
+/* Services Overview Cards */
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+  margin-top: 3rem;
+}
+.service-card {
+  background: #fff;
+  border: 1px solid rgba(0,0,0,0.06);
+  border-radius: 8px;
+  padding: 2rem 1.5rem;
+  transition: all 0.35s ease;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+}
+.service-card::before {
+  content: '';
+  position: absolute;
+  bottom: 0; left: 0; right: 0;
+  height: 3px;
+  background: var(--crimson);
+  transform: scaleX(0);
+  transition: transform 0.35s ease;
+}
+.service-card:hover::before { transform: scaleX(1); }
+.service-card:hover {
+  background: var(--crimson);
+  transform: translateY(-8px);
+  box-shadow: 0 20px 50px rgba(139,26,26,0.4);
+}
+.service-card:hover .service-icon { color: var(--gold); }
+.service-card:hover h3, .service-card:hover p, .service-card:hover .service-more { color: #fff; }
+.service-icon {
+  font-size: 2.2rem;
+  color: var(--crimson);
+  margin-bottom: 1.2rem;
+  transition: color var(--transition);
+}
+.service-card h3 {
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin-bottom: 0.6rem;
+  color: var(--dark-bg);
+  transition: color var(--transition);
+}
+.service-card p {
+  font-size: 0.88rem;
+  color: #555;
+  line-height: 1.6;
+  transition: color var(--transition);
+}
+.service-more {
+  display: inline-block;
+  margin-top: 1rem;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--crimson);
+  transition: color var(--transition);
+}
+
+/* Elevator Types Slider */
+.elevator-slider { padding: 6rem 0; background: #0a0a14; }
+.swiper-elevator { padding-bottom: 3.5rem !important; }
+.elev-card {
+  background: rgba(255,255,255,0.03);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  overflow: hidden;
+  transition: all 0.35s ease;
+}
+.elev-card:hover {
+  transform: translateY(-8px);
+  border-color: rgba(201,168,76,0.3);
+  box-shadow: 0 20px 50px rgba(0,0,0,0.4);
+}
+.elev-img {
+  height: 200px;
+  overflow: hidden;
+  position: relative;
+  background: linear-gradient(135deg, #1a1a2e, #0f0f1a);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 4rem;
+  color: rgba(201,168,76,0.3);
+}
+.elev-img img { width: 100%; height: 100%; object-fit: cover; }
+.elev-body { padding: 1.5rem; }
+.elev-body h3 { font-size: 1.15rem; margin-bottom: 0.4rem; }
+.elev-body p { font-size: 0.85rem; color: var(--gray-text); margin-bottom: 1rem; }
+.elev-link {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--gold);
+}
+.swiper-pagination-bullet { background: rgba(255,255,255,0.3) !important; }
+.swiper-pagination-bullet-active { background: var(--gold) !important; }
+.swiper-button-next, .swiper-button-prev {
+  color: var(--gold) !important;
+}
+
+/* Why Choose Rado */
+.why-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  margin-top: 3rem;
+}
+.why-item {
+  display: flex;
+  gap: 1.2rem;
+  align-items: flex-start;
+}
+.why-icon {
+  width: 52px; height: 52px;
+  min-width: 52px;
+  background: rgba(201,168,76,0.1);
+  border: 1px solid rgba(201,168,76,0.2);
+  border-radius: 8px;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 1.4rem;
+  color: var(--gold);
+}
+.why-text h4 { font-size: 1rem; font-weight: 700; margin-bottom: 0.3rem; }
+.why-text p { font-size: 0.85rem; color: var(--gray-text); line-height: 1.5; }
+
+/* Projects Masonry */
+.projects-filter {
+  display: flex;
+  gap: 0.6rem;
+  flex-wrap: wrap;
+  margin-bottom: 2.5rem;
+}
+.filter-btn {
+  padding: 0.5rem 1.2rem;
+  border-radius: 50px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  border: 2px solid rgba(0,0,0,0.12);
+  background: transparent;
+  color: #555;
+  cursor: pointer;
+  transition: all var(--transition);
+}
+.filter-btn.active, .filter-btn:hover {
+  background: var(--crimson);
+  border-color: var(--crimson);
+  color: #fff;
+}
+.projects-grid {
+  columns: 3;
+  gap: 1.2rem;
+}
+.project-card {
+  break-inside: avoid;
+  margin-bottom: 1.2rem;
+  border-radius: 8px;
+  overflow: hidden;
+  position: relative;
+  cursor: pointer;
+}
+.project-img {
+  width: 100%;
+  display: block;
+  transition: transform 0.5s ease;
+  min-height: 200px;
+  object-fit: cover;
+  background: linear-gradient(135deg, #1a1a2e 0%, #2a1a1a 100%);
+}
+.project-card:hover .project-img { transform: scale(1.06); }
+.project-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(0deg, rgba(15,15,26,0.9) 0%, rgba(15,15,26,0.3) 60%, transparent 100%);
+  opacity: 0;
+  transition: opacity var(--transition);
+  display: flex;
+  align-items: flex-end;
+  padding: 1.5rem;
+}
+.project-card:hover .project-overlay { opacity: 1; }
+.project-info h4 { font-size: 1rem; margin-bottom: 0.2rem; }
+.project-info span {
+  font-size: 0.75rem;
+  color: var(--gold);
+  font-family: 'Montserrat', sans-serif;
+  letter-spacing: 0.05em;
+}
+
+/* Placeholder project images */
+.proj-placeholder {
+  display: flex; align-items: center; justify-content: center;
+  font-size: 3rem; color: rgba(255,255,255,0.1);
+  position: relative;
+}
+.proj-placeholder.h1 { height: 260px; }
+.proj-placeholder.h2 { height: 200px; }
+.proj-placeholder.h3 { height: 300px; }
+.proj-placeholder.h4 { height: 220px; }
+.proj-placeholder.h5 { height: 240px; }
+.proj-placeholder.h6 { height: 280px; }
+.proj-placeholder.h7 { height: 200px; }
+.proj-placeholder.h8 { height: 250px; }
+.proj-placeholder.h9 { height: 210px; }
+.proj-placeholder.h10 { height: 270px; }
+.proj-placeholder.h11 { height: 230px; }
+.proj-placeholder.h12 { height: 260px; }
+
+.proj-p1 { background: linear-gradient(135deg, #1a1a2e, #2d1a0e); }
+.proj-p2 { background: linear-gradient(135deg, #0e1a2d, #1a0e2d); }
+.proj-p3 { background: linear-gradient(135deg, #1a0e1a, #0e1a0e); }
+.proj-p4 { background: linear-gradient(135deg, #2d2d0e, #1a1a0e); }
+.proj-p5 { background: linear-gradient(135deg, #0e2d1a, #1a0e2d); }
+.proj-p6 { background: linear-gradient(135deg, #2d0e1a, #0e0e2d); }
+.proj-p7 { background: linear-gradient(135deg, #1a2d0e, #2d1a0e); }
+.proj-p8 { background: linear-gradient(135deg, #0e1a2d, #2d0e0e); }
+.proj-p9 { background: linear-gradient(135deg, #2d1a1a, #0e2d0e); }
+.proj-p10 { background: linear-gradient(135deg, #1a0e2d, #2d2d0e); }
+.proj-p11 { background: linear-gradient(135deg, #0e2d2d, #1a1a0e); }
+.proj-p12 { background: linear-gradient(135deg, #2d0e2d, #0e1a1a); }
+
+/* Testimonials */
+.testimonial-card {
+  background: rgba(255,255,255,0.04);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 2.5rem;
+  position: relative;
+}
+.testimonial-card::before {
+  content: '"';
+  position: absolute;
+  top: -0.5rem; left: 1.5rem;
+  font-family: 'Playfair Display', serif;
+  font-size: 5rem;
+  color: var(--gold);
+  opacity: 0.2;
+  line-height: 1;
+}
+.test-stars { color: var(--gold); margin-bottom: 1rem; font-size: 0.9rem; }
+.test-quote { font-size: 0.95rem; color: rgba(255,255,255,0.8); line-height: 1.7; margin-bottom: 1.5rem; }
+.test-author { display: flex; align-items: center; gap: 1rem; }
+.test-avatar {
+  width: 48px; height: 48px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--crimson), var(--accent));
+  display: flex; align-items: center; justify-content: center;
+  font-family: 'Playfair Display', serif;
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #fff;
+}
+.test-name { font-weight: 700; font-size: 0.95rem; }
+.test-company { font-size: 0.78rem; color: var(--gray-text); }
+
+/* CTA Banner */
+.cta-banner {
+  background: linear-gradient(135deg, var(--crimson) 0%, var(--accent) 50%, #8B1A1A 100%);
+  padding: 5rem 0;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+.cta-banner::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: repeating-linear-gradient(
+    45deg, transparent, transparent 30px,
+    rgba(255,255,255,0.02) 30px, rgba(255,255,255,0.02) 31px
+  );
+}
+.cta-banner h2 { font-size: clamp(2rem, 4vw, 3rem); margin-bottom: 0.8rem; }
+.cta-banner p { font-size: 1.1rem; opacity: 0.85; margin-bottom: 2rem; }
+
+/* Contact Quick Strip */
+.contact-strip {
+  background: #0a0a14;
+  padding: 2rem 0;
+  border-top: 1px solid var(--border);
+}
+.contact-strip-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+}
+.cs-item {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.cs-icon {
+  width: 44px; height: 44px;
+  border-radius: 8px;
+  background: rgba(139,26,26,0.2);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 1.1rem;
+  color: var(--gold);
+  min-width: 44px;
+}
+.cs-text span { display: block; font-size: 0.7rem; color: var(--gray-text); font-family: 'Montserrat', sans-serif; letter-spacing: 0.08em; text-transform: uppercase; }
+.cs-text strong { font-size: 0.92rem; color: #fff; }
+
+/* ════════════════════════════════════════
+   ABOUT PAGE
+════════════════════════════════════════ */
+.about-story {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 5rem;
+  align-items: center;
+  padding: 6rem 0;
+}
+.about-story .story-text {
+  border-left: 4px solid var(--crimson);
+  padding-left: 2rem;
+}
+.about-story .story-text p {
+  font-size: 0.95rem;
+  color: rgba(255,255,255,0.75);
+  line-height: 1.8;
+  margin-bottom: 1rem;
+}
+.about-image-box {
+  border-radius: 8px;
+  overflow: hidden;
+  background: linear-gradient(135deg, #1a1a2e, #2a1a0e);
+  height: 420px;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 6rem;
+  color: rgba(255,255,255,0.06);
+  position: relative;
+}
+.about-image-box img { width:100%; height:100%; object-fit: cover; }
+
+/* Timeline */
+.timeline { position: relative; padding: 4rem 0; }
+.timeline::before {
+  content: '';
+  position: absolute;
+  top: 0; bottom: 0;
+  left: 50%;
+  width: 2px;
+  background: linear-gradient(180deg, var(--crimson), var(--gold));
+  transform: translateX(-50%);
+}
+.tl-item {
+  display: flex;
+  width: 100%;
+  margin-bottom: 3rem;
+  position: relative;
+}
+.tl-item.right { flex-direction: row-reverse; }
+.tl-content {
+  width: 45%;
+  background: rgba(255,255,255,0.04);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 1.5rem;
+}
+.tl-item.left .tl-content { margin-right: auto; }
+.tl-item.right .tl-content { margin-left: auto; }
+.tl-dot {
+  position: absolute;
+  left: 50%;
+  top: 1.5rem;
+  width: 16px; height: 16px;
+  background: var(--gold);
+  border-radius: 50%;
+  transform: translateX(-50%);
+  z-index: 1;
+  box-shadow: 0 0 0 4px rgba(201,168,76,0.2);
+}
+.tl-year {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: var(--gold);
+  margin-bottom: 0.3rem;
+}
+.tl-content h4 { font-size: 1rem; margin-bottom: 0.3rem; }
+.tl-content p { font-size: 0.85rem; color: var(--gray-text); }
+
+/* Team */
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  margin-top: 3rem;
+}
+.team-card {
+  text-align: center;
+  background: rgba(255,255,255,0.03);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 2.5rem 1.5rem;
+  transition: all 0.35s ease;
+}
+.team-card:hover {
+  border-color: rgba(201,168,76,0.4);
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-hover);
+}
+.team-avatar {
+  width: 100px; height: 100px;
+  border-radius: 50%;
+  margin: 0 auto 1.2rem;
+  background: linear-gradient(135deg, var(--crimson), var(--accent));
+  display: flex; align-items: center; justify-content: center;
+  font-family: 'Playfair Display', serif;
+  font-size: 2rem;
+  font-weight: 700;
+  color: #fff;
+  border: 3px solid transparent;
+  transition: border-color var(--transition);
+}
+.team-card:hover .team-avatar { border-color: var(--gold); }
+.team-card h4 { font-size: 1.1rem; margin-bottom: 0.2rem; }
+.team-card span { font-size: 0.8rem; color: var(--gold); font-family: 'Montserrat', sans-serif; }
+.team-linkedin {
+  display: inline-flex;
+  width: 34px; height: 34px;
+  background: rgba(0,119,181,0.15);
+  border-radius: 50%;
+  align-items: center; justify-content: center;
+  color: #0077b5;
+  margin-top: 1rem;
+  transition: background var(--transition);
+  font-size: 0.9rem;
+}
+.team-linkedin:hover { background: #0077b5; color: #fff; }
+
+/* Mission Vision */
+.mv-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  margin-top: 3rem;
+}
+.mv-card { padding: 2.5rem; border-radius: 8px; background: rgba(255,255,255,0.03); }
+.mv-card.mission { border-left: 4px solid var(--crimson); }
+.mv-card.vision { border-left: 4px solid var(--gold); }
+.mv-card h3 { font-size: 1.5rem; margin-bottom: 1rem; }
+.mv-card p { font-size: 0.95rem; color: rgba(255,255,255,0.75); line-height: 1.8; }
+
+/* Certs strip */
+.cert-strip {
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 2rem;
+}
+.cert-badge {
+  background: rgba(255,255,255,0.05);
+  border: 2px solid rgba(201,168,76,0.2);
+  border-radius: 12px;
+  padding: 1.5rem 2rem;
+  text-align: center;
+  min-width: 140px;
+  transition: all var(--transition);
+}
+.cert-badge:hover { border-color: var(--gold); transform: translateY(-4px); }
+.cert-badge i { font-size: 2rem; color: var(--gold); display: block; margin-bottom: 0.6rem; }
+.cert-badge span { font-size: 0.75rem; color: rgba(255,255,255,0.7); font-family: 'Montserrat', sans-serif; letter-spacing: 0.05em; display: block; }
+
+/* ════════════════════════════════════════
+   PRODUCTS PAGE
+════════════════════════════════════════ */
+.product-section {
+  padding: 5rem 0;
+  border-bottom: 1px solid var(--border);
+}
+.product-section:last-child { border-bottom: none; }
+.product-layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: center;
+}
+.product-layout.reverse { direction: rtl; }
+.product-layout.reverse > * { direction: ltr; }
+.product-gallery {
+  border-radius: 8px;
+  overflow: hidden;
+  background: linear-gradient(135deg, #1a1a2e, #2a1a0e);
+  height: 380px;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 6rem;
+  color: rgba(255,255,255,0.08);
+  position: relative;
+}
+.product-gallery img { width:100%; height:100%; object-fit:cover; }
+.product-badge {
+  position: absolute;
+  top: 1rem; left: 1rem;
+  background: var(--crimson);
+  color: #fff;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 0.3rem 0.8rem;
+  border-radius: 50px;
+}
+.product-details h2 { font-size: clamp(1.6rem, 3vw, 2.2rem); margin-bottom: 1rem; }
+.product-details p { color: rgba(255,255,255,0.7); font-size: 0.95rem; line-height: 1.8; margin-bottom: 1.5rem; }
+.spec-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 1.5rem;
+}
+.spec-table tr { border-bottom: 1px solid var(--border); }
+.spec-table td {
+  padding: 0.6rem 0;
+  font-size: 0.88rem;
+}
+.spec-table td:first-child {
+  color: var(--gray-text);
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.72rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  width: 40%;
+}
+.spec-table td:last-child { color: #fff; font-weight: 500; }
+.feature-list { margin-bottom: 1.5rem; }
+.feature-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.6rem;
+  font-size: 0.88rem;
+  color: rgba(255,255,255,0.75);
+  margin-bottom: 0.4rem;
+}
+.feature-list li i { color: var(--gold); margin-top: 0.15rem; font-size: 0.8rem; }
+.product-btns { display: flex; gap: 0.8rem; flex-wrap: wrap; }
+
+/* ════════════════════════════════════════
+   SERVICES PAGE
+════════════════════════════════════════ */
+.service-section {
+  padding: 6rem 0;
+  border-bottom: 1px solid var(--border);
+}
+.service-layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: start;
+}
+.service-layout.reverse { direction: rtl; }
+.service-layout.reverse > * { direction: ltr; }
+
+/* Installation Steps */
+.install-steps {
+  display: flex;
+  gap: 0;
+  margin: 2rem 0;
+  overflow-x: auto;
+}
+.install-step {
+  flex: 1;
+  min-width: 100px;
+  text-align: center;
+  position: relative;
+  padding: 0 0.5rem;
+}
+.install-step::after {
+  content: '';
+  position: absolute;
+  top: 20px; right: -50%;
+  width: 100%; height: 2px;
+  background: linear-gradient(90deg, var(--gold), rgba(201,168,76,0.3));
+}
+.install-step:last-child::after { display: none; }
+.step-num {
+  width: 40px; height: 40px;
+  border-radius: 50%;
+  background: var(--crimson);
+  border: 2px solid var(--gold);
+  display: flex; align-items: center; justify-content: center;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  font-size: 0.85rem;
+  color: #fff;
+  margin: 0 auto 0.6rem;
+  position: relative;
+  z-index: 1;
+}
+.step-label { font-size: 0.72rem; color: rgba(255,255,255,0.7); font-family: 'Montserrat', sans-serif; line-height: 1.3; }
+
+/* AMC Pricing */
+.amc-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  margin-top: 3rem;
+}
+.amc-card {
+  background: rgba(255,255,255,0.03);
+  border: 2px solid var(--border);
+  border-radius: 12px;
+  padding: 2.5rem 2rem;
+  text-align: center;
+  transition: all 0.35s ease;
+  position: relative;
+}
+.amc-card.featured {
+  border-color: var(--gold);
+  background: rgba(201,168,76,0.06);
+  transform: scale(1.04);
+}
+.amc-card:hover { transform: translateY(-6px); box-shadow: var(--shadow-hover); }
+.amc-card.featured:hover { transform: scale(1.04) translateY(-6px); }
+.amc-badge {
+  position: absolute;
+  top: -14px; left: 50%; transform: translateX(-50%);
+  background: var(--gold);
+  color: var(--dark-bg);
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  padding: 0.3rem 1rem;
+  border-radius: 50px;
+  white-space: nowrap;
+}
+.amc-tier {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 1rem;
+}
+.amc-price {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: #fff;
+  line-height: 1;
+  margin-bottom: 0.3rem;
+}
+.amc-price sup { font-size: 1.2rem; vertical-align: top; margin-top: 0.5rem; }
+.amc-period { font-size: 0.8rem; color: var(--gray-text); margin-bottom: 1.5rem; }
+.amc-features { text-align: left; margin-bottom: 2rem; }
+.amc-features li {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.85rem;
+  color: rgba(255,255,255,0.75);
+  padding: 0.4rem 0;
+  border-bottom: 1px solid rgba(255,255,255,0.05);
+}
+.amc-features li i { color: var(--gold); width: 16px; text-align: center; }
+
+/* Emergency Repair */
+.emergency-cta {
+  background: rgba(139,26,26,0.1);
+  border: 2px solid rgba(139,26,26,0.4);
+  border-radius: 12px;
+  padding: 2.5rem;
+  text-align: center;
+  position: relative;
+}
+.emergency-number {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: var(--gold);
+  display: block;
+}
+.pulse-btn {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 1rem 2rem;
+  background: var(--crimson);
+  color: #fff;
+  border: none;
+  border-radius: 50px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  cursor: pointer;
+  margin-top: 1.5rem;
+}
+.pulse-btn::before {
+  content: '';
+  position: absolute;
+  inset: -6px;
+  border-radius: 50px;
+  border: 2px solid var(--crimson);
+  animation: pulseRing 1.5s ease-out infinite;
+}
+@keyframes pulseRing {
+  0% { transform: scale(1); opacity: 0.8; }
+  100% { transform: scale(1.3); opacity: 0; }
+}
+.repair-issues {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.8rem;
+  margin-top: 1.5rem;
+}
+.repair-issue {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-size: 0.85rem;
+  color: rgba(255,255,255,0.75);
+}
+.repair-issue i { color: var(--accent); font-size: 0.8rem; }
+
+/* Before/After Slider */
+.comparison-container {
+  position: relative;
+  border-radius: 12px;
+  overflow: hidden;
+  user-select: none;
+  height: 380px;
+}
+.comparison-before, .comparison-after {
+  position: absolute;
+  inset: 0;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 5rem;
+}
+.comparison-before { background: linear-gradient(135deg, #1a0a0a, #2a1a1a); color: rgba(255,255,255,0.1); z-index: 1; }
+.comparison-after { background: linear-gradient(135deg, #0a1a2a, #1a2a0a); color: rgba(255,255,255,0.1); clip-path: inset(0 50% 0 0); z-index: 2; transition: clip-path 0.05s ease; }
+.comparison-label {
+  position: absolute;
+  bottom: 1rem;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 0.3rem 0.8rem;
+  border-radius: 50px;
+  z-index: 3;
+}
+.label-before { left: 1rem; background: rgba(0,0,0,0.7); }
+.label-after { right: 1rem; background: var(--gold); color: var(--dark-bg); }
+.comparison-handle {
+  position: absolute;
+  top: 0; bottom: 0;
+  left: 50%;
+  width: 4px;
+  background: #fff;
+  transform: translateX(-50%);
+  z-index: 4;
+  cursor: ew-resize;
+}
+.comparison-handle::after {
+  content: '⟷';
+  position: absolute;
+  top: 50%; left: 50%;
+  transform: translate(-50%, -50%);
+  width: 40px; height: 40px;
+  background: #fff;
+  border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  color: var(--dark-bg);
+  font-size: 1rem;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.4);
+}
+.label-text-ba { font-size: 1.2rem; color: rgba(255,255,255,0.12); }
+
+/* Service image boxes */
+.service-img-box {
+  border-radius: 12px;
+  overflow: hidden;
+  height: 380px;
+  background: linear-gradient(135deg, #1a1a2e, #2a1a0e);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 5rem; color: rgba(255,255,255,0.07);
+}
+.service-img-box img { width:100%; height:100%; object-fit:cover; }
+
+/* ════════════════════════════════════════
+   CERTIFICATIONS PAGE
+════════════════════════════════════════ */
+.cert-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  margin-top: 3rem;
+}
+.cert-card {
+  background: rgba(255,255,255,0.03);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 3rem 2rem;
+  text-align: center;
+  transition: all 0.35s ease;
+  cursor: pointer;
+}
+.cert-card:hover {
+  border-color: rgba(201,168,76,0.4);
+  transform: translateY(-6px);
+  box-shadow: 0 20px 50px rgba(0,0,0,0.4);
+}
+.cert-icon { font-size: 3.5rem; color: var(--gold); margin-bottom: 1.2rem; display: block; }
+.cert-card h3 { font-size: 1.1rem; margin-bottom: 0.4rem; }
+.cert-card p { font-size: 0.85rem; color: var(--gray-text); }
+.compliance-list { margin-top: 3rem; }
+.compliance-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.2rem;
+  padding: 1.2rem 0;
+  border-bottom: 1px solid var(--border);
+}
+.comp-icon {
+  width: 44px; height: 44px; min-width: 44px;
+  background: rgba(201,168,76,0.1);
+  border-radius: 8px;
+  display: flex; align-items: center; justify-content: center;
+  color: var(--gold);
+  font-size: 1.1rem;
+}
+.comp-text h4 { font-size: 0.95rem; margin-bottom: 0.2rem; }
+.comp-text p { font-size: 0.85rem; color: var(--gray-text); }
+.quality-promise {
+  background: linear-gradient(135deg, #0a0a14, #1a0a0a);
+  border: 1px solid rgba(201,168,76,0.15);
+  border-radius: 16px;
+  padding: 4rem;
+  text-align: center;
+  margin-top: 4rem;
+}
+.promise-number {
+  font-family: 'Playfair Display', serif;
+  font-size: 5rem;
+  font-weight: 800;
+  color: var(--gold);
+  line-height: 1;
+}
+
+/* ════════════════════════════════════════
+   CONTACT PAGE
+════════════════════════════════════════ */
+.contact-layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  min-height: 80vh;
+}
+.contact-left {
+  background: linear-gradient(135deg, #0f0f1a, #1a0a0a);
+  padding: 5rem 3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.contact-right {
+  background: var(--light-bg);
+  padding: 5rem 3rem;
+}
+.contact-info-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+.ci-icon {
+  width: 46px; height: 46px; min-width: 46px;
+  border-radius: 8px;
+  background: rgba(139,26,26,0.15);
+  border: 1px solid rgba(139,26,26,0.3);
+  display: flex; align-items: center; justify-content: center;
+  color: var(--gold); font-size: 1.1rem;
+}
+.ci-text span { font-size: 0.7rem; font-family: 'Montserrat', sans-serif; letter-spacing: 0.1em; text-transform: uppercase; color: var(--gray-text); display: block; margin-bottom: 0.2rem; }
+.ci-text strong { font-size: 0.95rem; color: #fff; display: block; }
+.ci-text a { color: #fff; }
+.social-links { display: flex; gap: 0.8rem; margin-top: 2rem; }
+.social-link {
+  width: 42px; height: 42px;
+  border-radius: 8px;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 1rem;
+  background: rgba(255,255,255,0.06);
+  border: 1px solid var(--border);
+  color: rgba(255,255,255,0.7);
+  transition: all var(--transition);
+}
+.social-link:hover { background: var(--crimson); border-color: var(--crimson); color: #fff; transform: translateY(-3px); }
+
+/* Contact Form */
+.contact-form { }
+.contact-form h2 { font-size: 1.8rem; color: var(--dark-bg); margin-bottom: 0.4rem; }
+.contact-form .sub { color: #666; font-size: 0.9rem; margin-bottom: 2rem; }
+.form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+.form-group { margin-bottom: 1.1rem; }
+.form-group label {
+  display: block;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #555;
+  margin-bottom: 0.4rem;
+}
+.form-group input, .form-group select, .form-group textarea {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  border: 2px solid rgba(0,0,0,0.1);
+  border-radius: 6px;
+  font-size: 0.9rem;
+  color: var(--dark-bg);
+  background: #fff;
+  transition: border-color var(--transition);
+}
+.form-group input:focus, .form-group select:focus, .form-group textarea:focus {
+  outline: none;
+  border-color: var(--crimson);
+}
+.form-group textarea { min-height: 100px; resize: vertical; }
+.form-submit {
+  width: 100%;
+  padding: 1rem;
+  background: var(--crimson);
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: background var(--transition);
+  margin-top: 0.5rem;
+}
+.form-submit:hover { background: var(--accent); }
+.form-note { font-size: 0.78rem; color: #888; text-align: center; margin-top: 0.8rem; }
+.success-msg {
+  display: none;
+  background: #d4edda;
+  color: #155724;
+  border: 1px solid #c3e6cb;
+  border-radius: 6px;
+  padding: 1rem;
+  margin-top: 1rem;
+  font-size: 0.9rem;
+}
+.error-msg { border-color: #f5c6cb !important; }
+
+/* Maps placeholder */
+.map-placeholder {
+  height: 300px;
+  background: linear-gradient(135deg, #1a1a2e, #2a1a0e);
+  display: flex; align-items: center; justify-content: center;
+  border-radius: 8px;
+  margin-top: 2rem;
+  color: rgba(255,255,255,0.3);
+  font-size: 0.9rem;
+  font-family: 'Montserrat', sans-serif;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.map-placeholder i { font-size: 2.5rem; color: rgba(201,168,76,0.3); }
+
+/* ════════════════════════════════════════
+   FOOTER
+════════════════════════════════════════ */
+.footer {
+  background: #080810;
+  border-top: 1px solid rgba(255,255,255,0.05);
+  padding: 5rem 0 2rem;
+}
+.footer-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1.5fr;
+  gap: 3rem;
+  padding-bottom: 3rem;
+  border-bottom: 1px solid var(--border);
+}
+.footer-brand .tagline {
+  font-size: 0.72rem;
+  font-family: 'Montserrat', sans-serif;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin: 0.8rem 0;
+}
+.footer-brand p {
+  font-size: 0.85rem;
+  color: var(--gray-text);
+  line-height: 1.7;
+  margin-bottom: 1.5rem;
+}
+.footer-logo { display: flex; align-items: center; gap: 0.6rem; margin-bottom: 0.5rem; }
+.footer-logo .logo-mark {
+  width: 40px; height: 40px;
+  background: var(--crimson);
+  border-radius: 4px;
+  display: flex; align-items: center; justify-content: center;
+  font-family: 'Playfair Display', serif;
+  font-weight: 800;
+  font-size: 1.4rem;
+  color: var(--gold);
+}
+.footer-col h4 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 1.2rem;
+}
+.footer-col ul li {
+  margin-bottom: 0.6rem;
+}
+.footer-col ul li a {
+  font-size: 0.85rem;
+  color: var(--gray-text);
+  transition: color var(--transition);
+  cursor: pointer;
+}
+.footer-col ul li a:hover { color: #fff; }
+.footer-contact-item {
+  display: flex;
+  gap: 0.8rem;
+  align-items: flex-start;
+  margin-bottom: 1rem;
+}
+.footer-contact-item i { color: var(--gold); margin-top: 0.2rem; font-size: 0.85rem; width: 16px; }
+.footer-contact-item span { font-size: 0.85rem; color: var(--gray-text); }
+.footer-social { display: flex; gap: 0.6rem; margin-top: 1.5rem; }
+.footer-social a {
+  width: 36px; height: 36px;
+  background: rgba(255,255,255,0.05);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 0.85rem;
+  color: var(--gray-text);
+  transition: all var(--transition);
+}
+.footer-social a:hover { background: var(--crimson); border-color: var(--crimson); color: #fff; transform: translateY(-2px); }
+.footer-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 2rem;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+.footer-bottom p { font-size: 0.8rem; color: rgba(255,255,255,0.3); }
+.footer-bottom a { color: rgba(255,255,255,0.4); transition: color var(--transition); }
+.footer-bottom a:hover { color: var(--gold); }
+
+/* ════════════════════════════════════════
+   RESPONSIVE
+════════════════════════════════════════ */
+@media (max-width: 1023px) {
+  .services-grid { grid-template-columns: repeat(2, 1fr); }
+  .why-grid { grid-template-columns: 1fr 1fr; }
+  .stats-grid { grid-template-columns: repeat(2, 1fr); }
+  .stat-item:nth-child(2) { border-right: none; }
+  .footer-grid { grid-template-columns: 1fr 1fr; gap: 2rem; }
+  .contact-layout { grid-template-columns: 1fr; }
+  .contact-left { padding: 4rem 2rem 3rem; }
+  .contact-right { padding: 3rem 2rem; }
+  .product-layout, .product-layout.reverse { grid-template-columns: 1fr; direction: ltr; gap: 2.5rem; }
+  .service-layout, .service-layout.reverse { grid-template-columns: 1fr; direction: ltr; gap: 2.5rem; }
+  .about-story { grid-template-columns: 1fr; gap: 3rem; }
+  .mv-grid { grid-template-columns: 1fr; }
+  .team-grid { grid-template-columns: 1fr 1fr; }
+  .cert-grid { grid-template-columns: 1fr 1fr; }
+  .amc-grid { grid-template-columns: 1fr; }
+  .amc-card.featured { transform: none; }
+  .timeline::before { left: 24px; }
+  .tl-item, .tl-item.right { flex-direction: column; }
+  .tl-content { width: 85%; margin-left: 4rem !important; }
+  .tl-dot { left: 24px; }
+  .form-row { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 767px) {
+  .nav-links { display: none; }
+  .hamburger { display: flex; }
+  .services-grid { grid-template-columns: 1fr 1fr; }
+  .why-grid { grid-template-columns: 1fr; }
+  .stats-grid { grid-template-columns: 1fr 1fr; }
+  .contact-strip-grid { grid-template-columns: 1fr 1fr; gap: 1.5rem; }
+  .projects-grid { columns: 2; }
+  .footer-grid { grid-template-columns: 1fr; }
+  .float-quote-mobile { display: inline-flex; }
+  .float-call, .float-wa { bottom: 6.5rem; }
+  .team-grid { grid-template-columns: 1fr; }
+  .cert-grid { grid-template-columns: 1fr; }
+  .footer-bottom { text-align: center; justify-content: center; }
+  .repair-issues { grid-template-columns: 1fr; }
+  .hero h1 { font-size: 2.2rem; }
+  .contact-left { padding: 3rem 1.5rem; }
+  .contact-right { padding: 2.5rem 1.5rem; }
+}
+
+@media (max-width: 479px) {
+  .services-grid { grid-template-columns: 1fr; }
+  .stats-grid { grid-template-columns: 1fr; }
+  .stat-item { border-right: none; border-bottom: 1px solid rgba(255,255,255,0.08); }
+  .projects-grid { columns: 1; }
+  .contact-strip-grid { grid-template-columns: 1fr; }
+}
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation: none !important;
+    transition-duration: 0.01ms !important;
+  }
+  .door-left, .door-right { transform: translateX(-100%) !important; }
+  .door-right { transform: translateX(100%) !important; }
+  .hero-content { opacity: 1 !important; transform: none !important; }
+  .hero-bg { animation: none !important; }
+}
+
+/* AOS override on reduced-motion */
+@media (prefers-reduced-motion: reduce) {
+  [data-aos] { opacity: 1 !important; transform: none !important; }
+}
+</style>
+</head>
+<body>
+
+<!-- ════════════════════════
+     PRELOADER (ELEVATOR DOOR)
+════════════════════════ -->
+<div id="preloader">
+  <div class="door-left"></div>
+  <div class="door-right"></div>
+  <div class="door-logo">
+    <span class="logo-r">R</span>
+    <span class="logo-name">RADO ELEVATORS</span>
+    <span class="logo-tag">WHERE SAFETY MEETS INNOVATION</span>
+  </div>
+</div>
+
+<!-- ════════════════════════
+     NAVBAR
+════════════════════════ -->
+<nav id="navbar" role="navigation" aria-label="Main navigation">
+  <div class="container">
+    <div class="nav-inner">
+      <div class="nav-logo" onclick="showPage('home')" aria-label="Rado Elevators Home">
+        <div class="logo-mark" aria-hidden="true"><img src="rado/logo.jpg" alt=""></div>
+        <div class="logo-text">
+          <span class="logo-name-nav">RADO ELEVATORS</span>
+          <span class="logo-sub-nav">WHERE SAFETY MEETS INNOVATION</span>
+        </div>
+      </div>
+      <ul class="nav-links" role="list">
+        <li><a onclick="showPage('home')" data-page="home" class="active" role="menuitem">Home</a></li>
+        <li><a onclick="showPage('about')" data-page="about" role="menuitem">About</a></li>
+        <li><a onclick="showPage('products')" data-page="products" role="menuitem">Products</a></li>
+        <li><a onclick="showPage('services')" data-page="services" role="menuitem">Services</a></li>
+        <li><a onclick="showPage('projects')" data-page="projects" role="menuitem">Projects</a></li>
+        <li><a onclick="showPage('certifications')" data-page="certifications" role="menuitem">Certifications</a></li>
+        <li><a onclick="showPage('contact')" data-page="contact" role="menuitem">Contact</a></li>
+      </ul>
+      <button class="nav-cta" onclick="showPage('contact')" aria-label="Get a free quote">Get Quote</button>
+      <button class="hamburger" onclick="toggleDrawer()" aria-label="Open menu" aria-expanded="false" id="hamburgerBtn">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</nav>
+
+<!-- Mobile Drawer -->
+<div class="mobile-drawer" id="mobileDrawer" role="dialog" aria-label="Navigation menu">
+  <button class="drawer-close" onclick="toggleDrawer()" aria-label="Close menu"><i class="fas fa-times"></i></button>
+  <nav class="drawer-links">
+    <a onclick="showPage('home');toggleDrawer()">Home</a>
+    <a onclick="showPage('about');toggleDrawer()">About</a>
+    <a onclick="showPage('products');toggleDrawer()">Products</a>
+    <a onclick="showPage('services');toggleDrawer()">Services</a>
+    <a onclick="showPage('projects');toggleDrawer()">Projects</a>
+    <a onclick="showPage('certifications');toggleDrawer()">Certifications</a>
+    <a onclick="showPage('contact');toggleDrawer()">Contact</a>
+    <a onclick="showPage('contact');toggleDrawer()" style="color:var(--gold);border-color:var(--gold)">Get Free Quote →</a>
+  </nav>
+</div>
+<div class="drawer-overlay" id="drawerOverlay" onclick="toggleDrawer()"></div>
+
+<!-- ════════════════════════
+     FLOATING BUTTONS
+════════════════════════ -->
+<a href="https://wa.me/+918737867995" target="_blank" rel="noopener" class="float-btn float-wa" aria-label="Chat on WhatsApp">
+  <i class="fab fa-whatsapp" aria-hidden="true"></i> WhatsApp
+</a>
+<a href="tel:+918737867995" class="float-btn float-call" aria-label="Call us now">
+  <i class="fas fa-phone" aria-hidden="true"></i> Call Now
+</a>
+<button class="float-btn float-quote-mobile" onclick="showPage('contact')" aria-label="Get a quote">
+  <i class="fas fa-file-alt" aria-hidden="true"></i> Get Quote
+</button>
+
+<!-- Back to Top -->
+<button id="backToTop" onclick="window.scrollTo({top:0,behavior:'smooth'})" aria-label="Back to top">
+  <i class="fas fa-chevron-up" aria-hidden="true"></i>
+</button>
+
+<!-- ════════════════════════════════════════════
+     PAGE: HOME
+════════════════════════════════════════════ -->
+<div class="page active" id="page-home">
+
+  <!-- HERO -->
+  <section class="hero" aria-label="Hero section">
+    <canvas id="particles-canvas" aria-hidden="true"></canvas>
+    <div class="hero-bg" aria-hidden="true"></div>
+    <div class="hero-glow" aria-hidden="true"></div>
+    <div class="container">
+      <div class="hero-content" id="heroContent">
+        <span class="eyebrow">INDIA'S TRUSTED ELEVATOR PARTNER</span>
+        <h1>Elevating Lives,<br>One Floor at a Time</h1>
+        <p class="hero-sub">Premium Installation &nbsp;•&nbsp; AMC &nbsp;•&nbsp; Modernization &nbsp;•&nbsp; 24/7 Repairs</p>
+        <div class="hero-btns">
+          <button class="btn btn-primary btn-lg" onclick="showPage('contact')">
+            Get Free Quote <i class="fas fa-arrow-right" aria-hidden="true"></i>
+          </button>
+          <button class="btn btn-outline btn-lg" onclick="showPage('projects')">
+            View Projects
+          </button>
+        </div>
+      </div>
+    </div>
+    <div class="scroll-indicator" aria-hidden="true">
+      <span>SCROLL</span>
+      <i class="fas fa-chevron-down"></i>
+    </div>
+  </section>
+
+  <!-- STATS BAR -->
+  <section class="stats-bar" aria-label="Company statistics">
+    <div class="container">
+      <div class="stats-grid">
+        <div class="stat-item" data-aos="fade-up">
+          <span class="stat-number" data-count="500">0</span><span class="stat-label">Projects Completed</span>
+        </div>
+        <div class="stat-item" data-aos="fade-up" data-aos-delay="100">
+          <span class="stat-number" data-count="15">0</span><span class="stat-label">Years of Excellence</span>
+        </div>
+        <div class="stat-item" data-aos="fade-up" data-aos-delay="200">
+          <span class="stat-number" data-count="50">0</span><span class="stat-label">Cities Served</span>
+        </div>
+        <div class="stat-item" data-aos="fade-up" data-aos-delay="300">
+          <span class="stat-number" data-count="100">0</span><span class="stat-label">% Safety Record</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICES OVERVIEW -->
+  <section class="section-pad bg-light" aria-label="Our services">
+    <div class="container">
+      <div class="text-center" data-aos="fade-up">
+        <span class="eyebrow">WHAT WE DO</span>
+        <h2 class="section-heading">Comprehensive Elevator Solutions</h2>
+        <div class="divider-line center"></div>
+        <p class="section-sub" style="margin:0 auto">From installation to modernization, we deliver end-to-end elevator excellence across India.</p>
+      </div>
+      <div class="services-grid">
+        <div class="service-card" data-aos="fade-up" onclick="showPage('services')" role="button" tabindex="0" aria-label="Learn about Installation services">
+          <div class="service-icon"><i class="fas fa-building" aria-hidden="true"></i></div>
+          <h3>Installation</h3>
+          <p>Precision-engineered elevator installations for residential, commercial, and industrial buildings of all scales.</p>
+          <span class="service-more">Learn More →</span>
+        </div>
+        <div class="service-card" data-aos="fade-up" data-aos-delay="100" onclick="showPage('services')" role="button" tabindex="0">
+          <div class="service-icon"><i class="fas fa-tools" aria-hidden="true"></i></div>
+          <h3>AMC Maintenance</h3>
+          <p>Annual maintenance contracts that keep your elevator in peak condition with scheduled inspections and priority support.</p>
+          <span class="service-more">Learn More →</span>
+        </div>
+        <div class="service-card" data-aos="fade-up" data-aos-delay="200" onclick="showPage('services')" role="button" tabindex="0">
+          <div class="service-icon"><i class="fas fa-sync-alt" aria-hidden="true"></i></div>
+          <h3>Modernization</h3>
+          <p>Upgrade your aging elevator with modern technology, improved safety systems, and contemporary design aesthetics.</p>
+          <span class="service-more">Learn More →</span>
+        </div>
+        <div class="service-card" data-aos="fade-up" data-aos-delay="300" onclick="showPage('services')" role="button" tabindex="0">
+          <div class="service-icon"><i class="fas fa-bolt" aria-hidden="true"></i></div>
+          <h3>Repair &amp; Breakdown</h3>
+          <p>24/7 emergency response team ready to resolve breakdowns and restore your elevator to full operation within hours.</p>
+          <span class="service-more">Learn More →</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ELEVATOR TYPES SLIDER -->
+  <section class="elevator-slider" aria-label="Our elevator range">
+    <div class="container">
+      <div class="text-center" data-aos="fade-up">
+        <span class="eyebrow">ELEVATOR RANGE</span>
+        <h2 class="section-heading">Our Elevator Range</h2>
+        <div class="divider-line center"></div>
+      </div>
+      <div class="swiper swiper-elevator" data-aos="fade-up" data-aos-delay="100">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide"><div class="elev-card">
+            <div class="elev-img"><img src="rado/passanger.jpg" alt=""></div>
+            <div class="elev-body">
+              <h3>Passenger Elevators</h3>
+              <p>High-capacity lifts for offices and residential towers, engineered for smooth, safe daily use.</p>
+              <span class="elev-link">View Details →</span>
+            </div>
+          </div></div>
+          <div class="swiper-slide"><div class="elev-card">
+            <div class="elev-img"><img src="rado/images.jpg" alt=""></div>
+            <div class="elev-body">
+              <h3>Home Elevators</h3>
+              <p>Compact, elegant residential lifts designed to complement your home's interior with style.</p>
+              <span class="elev-link">View Details →</span>
+            </div>
+          </div></div>
+          <div class="swiper-slide"><div class="elev-card">
+            <div class="elev-img"><img src="rado/hospital-elevators.jpg" alt=""></div>
+            <div class="elev-body">
+              <h3>Hospital Elevators</h3>
+              <p>Stretcher-compatible, ultra-smooth elevators meeting all healthcare accessibility standards.</p>
+              <span class="elev-link">View Details →</span>
+            </div>
+          </div></div>
+          <div class="swiper-slide"><div class="elev-card">
+            <div class="elev-img"><img src="rado/FreightGoodsElevators.jpg" alt=""></div>
+            <div class="elev-body">
+              <h3>Freight Elevators</h3>
+              <p>Heavy-duty goods lifts supporting up to 5000kg for industrial and commercial warehouses.</p>
+              <span class="elev-link">View Details →</span>
+            </div>
+          </div></div>
+          <div class="swiper-slide"><div class="elev-card">
+            <div class="elev-img"><img src="rado/capsul.jpg" alt=""></div>
+            <div class="elev-body">
+              <h3>Capsule Elevators</h3>
+              <p>Panoramic glass capsule lifts that become an architectural statement in your building.</p>
+              <span class="elev-link">View Details →</span>
+            </div>
+          </div></div>
+          <div class="swiper-slide"><div class="elev-card">
+            <div class="elev-img"><img src="rado/MRLElevators.jpg" alt=""></div>
+            <div class="elev-body">
+              <h3>MRL Elevators</h3>
+              <p>Machine room-less technology that saves space, reduces energy, and operates whisper-quiet.</p>
+              <span class="elev-link">View Details →</span>
+            </div>
+          </div></div>
+        </div>
+        <div class="swiper-pagination"></div>
+        <div class="swiper-button-next" aria-label="Next elevator"></div>
+        <div class="swiper-button-prev" aria-label="Previous elevator"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHY CHOOSE RADO -->
+  <section class="section-pad bg-dark" aria-label="Why choose Rado">
+    <div class="container">
+      <div class="text-center" data-aos="fade-up">
+        <span class="eyebrow">OUR ADVANTAGE</span>
+        <h2 class="section-heading">Why Choose Rado?</h2>
+        <div class="divider-line center"></div>
+      </div>
+      <div class="why-grid">
+        <div class="why-item" data-aos="fade-up">
+          <div class="why-icon"><i class="fas fa-certificate" aria-hidden="true"></i></div>
+          <div class="why-text">
+            <h4>ISO Certified Quality</h4>
+            <p>Every installation adheres to ISO 9001:2015 quality management standards and Indian IS 14665 norms.</p>
+          </div>
+        </div>
+        <div class="why-item" data-aos="fade-up" data-aos-delay="100">
+          <div class="why-icon"><i class="fas fa-headset" aria-hidden="true"></i></div>
+          <div class="why-text">
+            <h4>24/7 Emergency Support</h4>
+            <p>Our response team is available around the clock with guaranteed on-site arrival within 4 hours.</p>
+          </div>
+        </div>
+        <div class="why-item" data-aos="fade-up" data-aos-delay="200">
+          <div class="why-icon"><i class="fas fa-shield-alt" aria-hidden="true"></i></div>
+          <div class="why-text">
+            <h4>Genuine Spare Parts Only</h4>
+            <p>We source authentic OEM parts — no counterfeits. Your elevator's longevity and safety are non-negotiable.</p>
+          </div>
+        </div>
+        <div class="why-item" data-aos="fade-up" data-aos-delay="300">
+          <div class="why-icon"><i class="fas fa-map-marked-alt" aria-hidden="true"></i></div>
+          <div class="why-text">
+            <h4>Pan-India Service Network</h4>
+            <p>Service centres in 50+ cities ensure rapid response and consistent quality wherever you are in India.</p>
+          </div>
+        </div>
+        <div class="why-item" data-aos="fade-up" data-aos-delay="400">
+          <div class="why-icon"><i class="fas fa-user-tie" aria-hidden="true"></i></div>
+          <div class="why-text">
+            <h4>Expert Certified Engineers</h4>
+            <p>All our technicians hold manufacturer certifications and undergo continuous training on the latest technologies.</p>
+          </div>
+        </div>
+        <div class="why-item" data-aos="fade-up" data-aos-delay="500">
+          <div class="why-icon"><i class="fas fa-tags" aria-hidden="true"></i></div>
+          <div class="why-text">
+            <h4>Transparent Pricing</h4>
+            <p>No hidden charges. We provide detailed quotes upfront so you always know exactly what you're paying for.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FEATURED PROJECTS -->
+  <section class="section-pad bg-light" aria-label="Featured projects">
+    <div class="container">
+      <div data-aos="fade-up">
+        <span class="eyebrow">OUR WORK</span>
+        <h2 class="section-heading">Recent Projects</h2>
+        <div class="divider-line"></div>
+      </div>
+      <div class="projects-filter" data-aos="fade-up">
+        <button class="filter-btn active" onclick="filterProjects(this,'all')">All</button>
+        <button class="filter-btn" onclick="filterProjects(this,'residential')">Residential</button>
+        <button class="filter-btn" onclick="filterProjects(this,'commercial')">Commercial</button>
+        <button class="filter-btn" onclick="filterProjects(this,'hotels')">Hotels</button>
+        <button class="filter-btn" onclick="filterProjects(this,'hospitals')">Hospitals</button>
+      </div>
+      <div class="projects-grid" id="homeProjectsGrid" data-aos="fade-up">
+        
+    </div>
+  </section>
+
+  <!-- TESTIMONIALS -->
+  <section class="section-pad bg-dark" aria-label="Client testimonials">
+    <div class="container">
+      <div class="text-center" data-aos="fade-up">
+        <span class="eyebrow">TESTIMONIALS</span>
+        <h2 class="section-heading">What Our Clients Say</h2>
+        <div class="divider-line center"></div>
+      </div>
+      <div class="swiper swiper-testimonials" data-aos="fade-up" data-aos-delay="100">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <div class="testimonial-card">
+              <div class="test-stars">★★★★★</div>
+              <p class="test-quote">Rado installed three passenger elevators in our residential complex. The quality of work, attention to detail, and post-installation support has been exceptional. Their team responded within 2 hours when we had a minor issue. Highly recommended.</p>
+              <div class="test-author">
+                <div class="test-avatar">RS</div>
+                <div><div class="test-name">Rajesh Sharma</div><div class="test-company">Director, Greenview Housing Society, Mumbai</div></div>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="testimonial-card">
+              <div class="test-stars">★★★★★</div>
+              <p class="test-quote">We chose Rado for our corporate tower's elevator modernization project. The before-and-after difference is remarkable — energy consumption dropped 38% and the ride quality is now comparable to five-star hotels. Worth every rupee.</p>
+              <div class="test-author">
+                <div class="test-avatar">PK</div>
+                <div><div class="test-name">Priya Krishnan</div><div class="test-company">Facilities Manager, TechAxis Corporate Tower, Pune</div></div>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="testimonial-card">
+              <div class="test-stars">★★★★★</div>
+              <p class="test-quote">The hospital-grade elevator Rado installed handles our ICU patient transport flawlessly. Their engineers understood our specific requirements for smooth deceleration and emergency backup power. Trust in their expertise is absolute.</p>
+              <div class="test-author">
+                <div class="test-avatar">AM</div>
+                <div><div class="test-name">Dr. Arun Mehta</div><div class="test-company">Administrator, Sunrise Super Speciality Hospital, Bangalore</div></div>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="testimonial-card">
+              <div class="test-stars">★★★★★</div>
+              <p class="test-quote">Five years of AMC with Rado and our hotel's four elevators have never had a single guest-impacting failure. Their preventive maintenance regime is thorough and their technicians are professional. A partnership we truly value.</p>
+              <div class="test-author">
+                <div class="test-avatar">SV</div>
+                <div><div class="test-name">Suresh Venkat</div><div class="test-company">General Manager, The Grand Meridian Hotel, Delhi</div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-pagination"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA BANNER -->
+  <section class="cta-banner" aria-label="Call to action">
+    <div class="container" style="position:relative;z-index:1">
+      <div data-aos="fade-up">
+        <h2>Ready to Install Your Elevator?</h2>
+        <p>Get a FREE site survey and expert consultation today — no obligation.</p>
+        <button class="btn btn-lg" onclick="showPage('contact')" style="background:#fff;color:var(--crimson);font-weight:700">
+          Request Free Quote <i class="fas fa-arrow-right" aria-hidden="true"></i>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT QUICK STRIP -->
+  <section class="contact-strip" aria-label="Contact information">
+    <div class="container">
+      <div class="contact-strip-grid">
+        <div class="cs-item">
+          <div class="cs-icon"><i class="fas fa-phone" aria-hidden="true"></i></div>
+          <div class="cs-text"><span>Call Us</span><strong>+91 XXXXX XXXXX</strong></div>
+        </div>
+        <div class="cs-item">
+          <div class="cs-icon"><i class="fas fa-envelope" aria-hidden="true"></i></div>
+          <div class="cs-text"><span>Email</span><strong>info@radoelevators.com</strong></div>
+        </div>
+        <div class="cs-item">
+          <div class="cs-icon"><i class="fas fa-map-marker-alt" aria-hidden="true"></i></div>
+          <div class="cs-text"><span>Headquarters</span><strong>India — 50+ Cities</strong></div>
+        </div>
+        <div class="cs-item">
+          <div class="cs-icon"><i class="fab fa-whatsapp" aria-hidden="true"></i></div>
+          <div class="cs-text"><span>WhatsApp</span><strong>+91 XXXXX XXXXX</strong></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER (included in home, shown on all pages via clone) -->
+</div><!-- /page-home -->
+
+<!-- ════════════════════════════════════════════
+     PAGE: ABOUT
+════════════════════════════════════════════ -->
+<div class="page" id="page-about">
+  <div class="page-hero">
+    <div class="page-hero-bg"></div>
+    <div class="page-hero-overlay"></div>
+    <div class="container page-hero-content">
+      <span class="eyebrow">WHO WE ARE</span>
+      <h1>About Rado Elevators</h1>
+      <p>15+ years of elevating standards, one building at a time.</p>
+    </div>
+  </div>
+
+  <!-- Company Story -->
+  <section class="bg-dark" style="padding:0">
+    <div class="container">
+      <div class="about-story">
+        <div class="story-text" data-aos="fade-right">
+          <span class="eyebrow">OUR STORY</span>
+          <h2 class="section-heading">Built on Trust.<br>Driven by Safety.</h2>
+          <div class="divider-line"></div>
+          <p>Founded in 2009, Rado Elevators began with a simple conviction: that every person who steps into an elevator deserves to feel completely safe and comfortable. From a small workshop in [City], India, we've grown into a pan-India elevator solutions company trusted by residential societies, corporate campuses, hospitals, and luxury hotels.</p>
+          <p>Our founders — experienced elevator engineers — were tired of compromised quality in the Indian market. They built Rado around an uncompromising philosophy: use only genuine parts, employ only certified technicians, and never cut corners on safety. That philosophy hasn't changed in fifteen years.</p>
+          <p>Today, with 500+ successful installations across 50+ cities, Rado stands as one of India's most trusted names in vertical transportation — and we're just getting started.</p>
+        </div>
+        <div class="about-image-box" data-aos="fade-left">
+          <img src="rado/safty2.jpg" alt="">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Timeline -->
+  <section class="section-pad bg-dark" style="padding-top:0">
+    <div class="container">
+      <div class="text-center" data-aos="fade-up">
+        <span class="eyebrow">OUR JOURNEY</span>
+        <h2 class="section-heading">Milestones That Define Us</h2>
+        <div class="divider-line center"></div>
+      </div>
+      <div class="timeline">
+        <div class="tl-item left" data-aos="fade-right">
+          <div class="tl-content">
+            <div class="tl-year">2009</div>
+            <h4>Founded in [City]</h4>
+            <p>Rado Elevators established with a team of 8 engineers and a mission to redefine elevator standards in India.</p>
+          </div>
+          <div class="tl-dot"></div>
+        </div>
+        <div class="tl-item right" data-aos="fade-left">
+          <div class="tl-content">
+            <div class="tl-year">2012</div>
+            <h4>First 100 Installations</h4>
+            <p>Crossed the landmark of 100 elevator installations across Maharashtra, establishing our reputation for quality.</p>
+          </div>
+          <div class="tl-dot"></div>
+        </div>
+        <div class="tl-item left" data-aos="fade-right">
+          <div class="tl-content">
+            <div class="tl-year">2015</div>
+            <h4>ISO 9001:2015 Certification</h4>
+            <p>Achieved ISO certification, formalizing our quality management systems and processes across all operations.</p>
+          </div>
+          <div class="tl-dot"></div>
+        </div>
+        <div class="tl-item right" data-aos="fade-left">
+          <div class="tl-content">
+            <div class="tl-year">2018</div>
+            <h4>Pan-India Expansion</h4>
+            <p>Expanded service network to 25 cities with dedicated regional teams and warehouses for faster response.</p>
+          </div>
+          <div class="tl-dot"></div>
+        </div>
+        <div class="tl-item left" data-aos="fade-right">
+          <div class="tl-content">
+            <div class="tl-year">2021</div>
+            <h4>500+ Projects Milestone</h4>
+            <p>Completed our 500th installation — a capsule elevator for a luxury hotel in Delhi — with zero safety incidents.</p>
+          </div>
+          <div class="tl-dot"></div>
+        </div>
+        <div class="tl-item right" data-aos="fade-left">
+          <div class="tl-content">
+            <div class="tl-year">2024</div>
+            <h4>50+ Cities, Going Strong</h4>
+            <p>Now serving 50+ cities across India with 200+ certified technicians and 24/7 emergency response coverage.</p>
+          </div>
+          <div class="tl-dot"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Team -->
+  <section class="section-pad bg-light">
+    <div class="container">
+      <div class="text-center" data-aos="fade-up">
+        <span class="eyebrow">OUR PEOPLE</span>
+        <h2 class="section-heading">The Team Behind Rado</h2>
+        <div class="divider-line center"></div>
+      </div>
+      <div class="team-grid">
+        <div class="team-card" data-aos="fade-up">
+          <div class="team-avatar">RK</div>
+          <h4>Rakesh Kumar</h4>
+          <span>Founder &amp; CEO</span>
+          <p style="font-size:0.82rem;color:#666;margin-top:0.5rem">25+ years in vertical transportation engineering, former Schindler India consultant.</p>
+          <a href="#" class="team-linkedin" aria-label="LinkedIn profile"><i class="fab fa-linkedin-in" aria-hidden="true"></i></a>
+        </div>
+        <div class="team-card" data-aos="fade-up" data-aos-delay="100">
+          <div class="team-avatar">SP</div>
+          <h4>Sunita Pillai</h4>
+          <span>Chief Engineer</span>
+          <p style="font-size:0.82rem;color:#666;margin-top:0.5rem">IIT Bombay alumna, specializes in MRL technology and elevator safety systems design.</p>
+          <a href="#" class="team-linkedin" aria-label="LinkedIn profile"><i class="fab fa-linkedin-in" aria-hidden="true"></i></a>
+        </div>
+        <div class="team-card" data-aos="fade-up" data-aos-delay="200">
+          <div class="team-avatar">VN</div>
+          <h4>Vijay Nair</h4>
+          <span>Head of Operations</span>
+          <p style="font-size:0.82rem;color:#666;margin-top:0.5rem">Oversees pan-India service delivery with a team of 200+ certified technicians across 50 cities.</p>
+          <a href="#" class="team-linkedin" aria-label="LinkedIn profile"><i class="fab fa-linkedin-in" aria-hidden="true"></i></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Mission & Vision -->
+  <section class="section-pad bg-dark">
+    <div class="container">
+      <div class="text-center" data-aos="fade-up">
+        <span class="eyebrow">OUR PURPOSE</span>
+        <h2 class="section-heading">Mission &amp; Vision</h2>
+        <div class="divider-line center"></div>
+      </div>
+      <div class="mv-grid">
+        <div class="mv-card mission" data-aos="fade-right">
+          <span class="eyebrow">MISSION</span>
+          <h3>What We Do Every Day</h3>
+          <p>To provide India's most reliable, safe, and innovative elevator solutions by upholding uncompromising quality standards, empowering certified professionals, and delivering genuine value to every client we serve — regardless of project size or budget.</p>
+        </div>
+        <div class="mv-card vision" data-aos="fade-left">
+          <span class="eyebrow" style="color:var(--gold)">VISION</span>
+          <h3>Where We're Headed</h3>
+          <p>To become India's foremost elevator company by 2030 — synonymous with safety, innovation, and trust. We envision a future where every building in India, from rural hospitals to urban skyscrapers, has access to world-class vertical transportation.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Certifications Strip -->
+  <section class="section-pad bg-dark" style="padding-top:0">
+    <div class="container">
+      <div class="text-center" data-aos="fade-up">
+        <span class="eyebrow">CREDENTIALS</span>
+        <h2 class="section-heading">Certified Excellence</h2>
+        <div class="divider-line center"></div>
+      </div>
+      <div class="cert-strip" data-aos="fade-up">
+        <div class="cert-badge"><i class="fas fa-award" aria-hidden="true"></i><span>ISO 9001:2015</span></div>
+        <div class="cert-badge"><i class="fas fa-shield-alt" aria-hidden="true"></i><span>BIS Certified</span></div>
+        <div class="cert-badge"><i class="fas fa-check-circle" aria-hidden="true"></i><span>IS 14665<br>Compliant</span></div>
+        <div class="cert-badge"><i class="fas fa-building" aria-hidden="true"></i><span>Govt. Approved</span></div>
+        <div class="cert-badge"><i class="fas fa-industry" aria-hidden="true"></i><span>ELCINA Member</span></div>
+      </div>
+    </div>
+  </section>
+</div><!-- /page-about -->
+
+<!-- ════════════════════════════════════════════
+     PAGE: PRODUCTS
+════════════════════════════════════════════ -->
+<div class="page" id="page-products">
+  <div class="page-hero">
+    <div class="page-hero-bg"></div>
+    <div class="page-hero-overlay"></div>
+    <div class="container page-hero-content">
+      <span class="eyebrow">ELEVATOR RANGE</span>
+      <h1>Our Elevator Range</h1>
+      <p>Engineered for Safety. Designed for Elegance.</p>
+    </div>
+  </div>
+
+  <div style="background:var(--dark-bg)">
+
+    <!-- Passenger Elevators -->
+    <div class="product-section">
+      <div class="container">
+        <div class="product-layout">
+          <div class="product-gallery" data-aos="fade-right">
+            <div class="product-badge">BESTSELLER</div>
+            <img src="rado/passanger.jpg" alt="">
+          </div>
+          <div class="product-details" data-aos="fade-left">
+            <span class="eyebrow">TYPE 01</span>
+            <h2>Passenger Elevators</h2>
+            <p>Our flagship passenger elevators are precision-engineered for daily high-frequency use across residential towers, corporate offices, malls, and government buildings. Built to IS 14665 standards with advanced safety systems as standard.</p>
+            <table class="spec-table" aria-label="Technical specifications">
+              <tr><td>Capacity</td><td>4 – 26 Persons (320kg – 2000kg)</td></tr>
+              <tr><td>Speed</td><td>1.0 – 2.5 m/s</td></tr>
+              <tr><td>Drive</td><td>VVVF Traction (Gearless / Geared)</td></tr>
+              <tr><td>Door Type</td><td>Auto Sliding — 2 or 3 Panel</td></tr>
+              <tr><td>Power</td><td>3-Phase, 415V ± 10%</td></tr>
+            </table>
+            <ul class="feature-list">
+              <li><i class="fas fa-check" aria-hidden="true"></i> ARD — Automatic Rescue Device included</li>
+              <li><i class="fas fa-check" aria-hidden="true"></i> Overload sensor with voice announcement</li>
+              <li><i class="fas fa-check" aria-hidden="true"></i> Seismic detection system (optional)</li>
+              <li><i class="fas fa-check" aria-hidden="true"></i> Remote monitoring via RADO-Connect IoT</li>
+              <li><i class="fas fa-check" aria-hidden="true"></i> Customizable cabin finishes and lighting</li>
+            </ul>
+            <div class="product-btns">
+              <button class="btn btn-primary" onclick="showPage('contact')">Get Quote <i class="fas fa-arrow-right" aria-hidden="true"></i></button>
+              <a href="#" class="btn btn-outline" download><i class="fas fa-file-pdf" aria-hidden="true"></i> Brochure</a>
+              <a href="https://wa.me/91XXXXXXXXXX" target="_blank" rel="noopener" class="btn btn-wa"><i class="fab fa-whatsapp" aria-hidden="true"></i> Inquire</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Home Elevators -->
+    <div class="product-section">
+      <div class="container">
+        <div class="product-layout reverse">
+          <div class="product-gallery" data-aos="fade-left">
+            <img src="rado/images.jpg" alt="">
+          </div>
+          <div class="product-details" data-aos="fade-right">
+            <span class="eyebrow">TYPE 02</span>
+            <h2>Home Elevators</h2>
+            <p>Elegant, compact residential lifts designed for villas, duplexes, and private bungalows. Where function meets interior design — your home elevator can be as beautiful as the home it serves.</p>
+            <table class="spec-table">
+              <tr><td>Capacity</td><td>2 – 6 Persons (160kg – 480kg)</td></tr>
+              <tr><td>Speed</td><td>0.15 – 0.4 m/s</td></tr>
+              <tr><td>Drive</td><td>Hydraulic / Pneumatic / Traction</td></tr>
+              <tr><td>Shaft</td><td>Minimal civil work, Glass optional</td></tr>
+              <tr><td>Floors</td><td>Up to 6 stops</td></tr>
+            </table>
+            <ul class="feature-list">
+              <li><i class="fas fa-check" aria-hidden="true"></i> Compact shaft — fits in existing stairwell</li>
+              <li><i class="fas fa-check" aria-hidden="true"></i> Fully customizable cabin: wood, glass, steel</li>
+              <li><i class="fas fa-check" aria-hidden="true"></i> Battery backup — works during power cuts</li>
+              <li><i class="fas fa-check" aria-hidden="true"></i> Near-silent operation — under 52 dB</li>
+              <li><i class="fas fa-check" aria-hidden="true"></i> Accessibility-ready design available</li>
+            </ul>
+            <div class="product-btns">
+              <button class="btn btn-primary" onclick="showPage('contact')">Get Quote <i class="fas fa-arrow-right" aria-hidden="true"></i></button>
+              <a href="#" class="btn btn-outline"><i class="fas fa-file-pdf" aria-hidden="true"></i> Brochure</a>
+              <a href="https://wa.me/91XXXXXXXXXX" target="_blank" rel="noopener" class="btn btn-wa"><i class="fab fa-whatsapp" aria-hidden="true"></i> Inquire</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Hospital Elevators -->
+    <div class="product-section">
+      <div class="container">
+        <div class="product-layout">
+          <div class="product-gallery" data-aos="fade-right">
+            <img src="rado/hospital-elevators.jpg" alt="">
+          </div>
+          <div class="product-details" data-aos="fade-left">
+            <span class="eyebrow">TYPE 03</span>
+            <h2>Hospital Elevators</h2>
+            <p>Mission-critical elevators engineered for healthcare environments — where smooth, silent, reliable operation is not optional. Stretcher-compatible dimensions and emergency power backup as standard.</p>
+            <table class="spec-table">
+              <tr><td>Capacity</td><td>1000kg – 2500kg</td></tr>
+              <tr><td>Cabin Width</td><td>Min. 1400mm for stretcher</td></tr>
+              <tr><td>Speed</td><td>1.0 – 1.6 m/s (ultra-smooth deceleration)</td></tr>
+              <tr><td>Door</td><td>Wide automatic — 900mm or 1000mm</td></tr>
+              <tr><td>Power Backup</td><td>ARD + Emergency Power (UPS)</td></tr>
+            </table>
+            <ul class="feature-list">
+              <li><i class="fas fa-check" aria-hidden="true"></i> Stainless steel cabin — antimicrobial grade</li>
+              <li><i class="fas fa-check" aria-hidden="true"></i> Priority call feature for emergency floors</li>
+              <li><i class="fas fa-check" aria-hidden="true"></i> Smooth deceleration &lt; 0.5 m/s² for patient comfort</li>
+              <li><i class="fas fa-check" aria-hidden="true"></i> Ventilation system integrated in cabin</li>
+              <li><i class="fas fa-check" aria-hidden="true"></i> Nurse control panel with intercom</li>
+            </ul>
+            <div class="product-btns">
+              <button class="btn btn-primary" onclick="showPage('contact')">Get Quote <i class="fas fa-arrow-right" aria-hidden="true"></i></button>
+              <a href="#" class="btn btn-outline"><i class="fas fa-file-pdf" aria-hidden="true"></i> Brochure</a>
+              <a href="https://wa.me/91XXXXXXXXXX" target="_blank" rel="noopener" class="btn btn-wa"><i class="fab fa-whatsapp" aria-hidden="true"></i> Inquire</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Freight Elevators -->
+    <div class="product-section">
+      <div class="container">
+        <div class="product-layout reverse">
+          <div class="product-gallery" data-aos="fade-left">
+            <img src="rado/FreightGoodsElevators.jpg" alt="">
+          </div>
+          <div class="product-details" data-aos="fade-right">
+            <span class="eyebrow">TYPE 04</span>
+            <h2>Freight / Goods Elevators</h2>
+            <p>Industrial-grade goods lifts built to withstand the demands of warehouses, factories, and logistics centres. Heavy-duty construction with heavy-gauge steel floors and reinforced doors.</p>
+            <table class="spec-table">
+              <tr><td>Capacity</td><td>500kg – 5000kg</td></tr>
+              <tr><td>Speed</td><td>0.25 – 1.0 m/s</td></tr>
+              <tr><td>Door</td><td>Manual / Auto Bi-Parting Steel</td></tr>
+              <tr><td>Platform</td><td>Up to 4.0m × 3.0m</td></tr>
+              <tr><td>Drive</td><td>Hydraulic / AC VF Traction</td></tr>
+            </table>
+            <ul class="feature-list">
+              <li><i class="fas fa-check" aria-hidden="true"></i> Forklift-ready platform with guide rails</li>
+              <li><i class="fas fa-check" aria-hidden="true"></i> Heavy-gauge chequered steel floor</li>
+              <li><i class="fas fa-check" aria-hidden="true"></i> Safety edge sensors on all doors</li>
+              <li><i class="fas fa-check" aria-hidden="true"></i> Oil-resistant flooring available</li>
+              <li><i class="fas fa-check" aria-hidden="true"></i> Explosion-proof variants for pharma/chemical</li>
+            </ul>
+            <div class="product-btns">
+              <button class="btn btn-primary" onclick="showPage('contact')">Get Quote <i class="fas fa-arrow-right" aria-hidden="true"></i></button>
+              <a href="#" class="btn btn-outline"><i class="fas fa-file-pdf" aria-hidden="true"></i> Brochure</a>
+              <a href="https://wa.me/91XXXXXXXXXX" target="_blank" rel="noopener" class="btn btn-wa"><i class="fab fa-whatsapp" aria-hidden="true"></i> Inquire</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Capsule Elevators -->
+    <div class="product-section" style="background:linear-gradient(135deg,#0a0a14,#1a0a0a)">
+      <div class="container">
+        <div class="product-layout">
+          <div class="product-gallery" data-aos="fade-right" style="background:linear-gradient(135deg,#1a1a40,#401a1a);border:1px solid rgba(201,168,76,0.2)">
+            <div class="product-badge">PREMIUM</div>
+            <img src="rado/capsul.jpg" alt="">
+          </div>
+          <div class="product-details" data-aos="fade-left">
+            <span class="eyebrow">TYPE 05</span>
+            <h2>Capsule Elevators</h2>
+            <p>Our signature product — panoramic glass capsule elevators that transform your building's interior into an architectural experience. Preferred by luxury hotels, high-end malls, and premium showrooms.</p>
+            <table class="spec-table">
+              <tr><td>Capacity</td><td>4 – 13 Persons</td></tr>
+              <tr><td>Speed</td><td>0.5 – 1.6 m/s</td></tr>
+              <tr><td>Glass</td><td>Tempered Laminated Safety Glass</td></tr>
+              <tr><td>Shape</td><td>Circular / Oval / Rectangular</td></tr>
+              <tr><td>Illumination</td><td>LED ambient, colour-programmable</td></tr>
+            </table>
+            <ul class="feature-list">
+              <li><i class="fas fa-check" aria-hidden="true"></i> 270° or 360° panoramic glass cabin</li>
+              <li><i class="fas fa-check" aria-hidden="true"></i> Frameless structural glass technology</li>
+              <li><i class="fas fa-check" aria-hidden="true"></i> Colour LED mood lighting with scene presets</li>
+              <li><i class="fas fa-check" aria-hidden="true"></i> Available without a traditional shaft (freestanding)</li>
+              <li><i class="fas fa-check" aria-hidden="true"></i> Custom architectural cladding options</li>
+            </ul>
+            <div class="product-btns">
+              <button class="btn btn-gold" onclick="showPage('contact')">Get Quote <i class="fas fa-arrow-right" aria-hidden="true"></i></button>
+              <a href="#" class="btn btn-outline"><i class="fas fa-file-pdf" aria-hidden="true"></i> Brochure</a>
+              <a href="https://wa.me/91XXXXXXXXXX" target="_blank" rel="noopener" class="btn btn-wa"><i class="fab fa-whatsapp" aria-hidden="true"></i> Inquire</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- MRL Elevators -->
+    <div class="product-section">
+      <div class="container">
+        <div class="product-layout reverse">
+          <div class="product-gallery" data-aos="fade-left">
+            <img src="rado/MRLElevators.jpg" alt="">
+          </div>
+          <div class="product-details" data-aos="fade-right">
+            <span class="eyebrow">TYPE 06</span>
+            <h2>MRL Elevators</h2>
+            <p>Machine Room-Less elevators — the modern builder's choice. No overhead machine room means reduced civil costs, more usable floor space, and 40% lower energy consumption compared to conventional traction elevators.</p>
+            <table class="spec-table">
+              <tr><td>Capacity</td><td>4 – 20 Persons</td></tr>
+              <tr><td>Speed</td><td>1.0 – 1.75 m/s</td></tr>
+              <tr><td>Drive</td><td>Permanent Magnet Gearless Traction</td></tr>
+              <tr><td>Control</td><td>Microprocessor-based VVVF</td></tr>
+              <tr><td>Energy</td><td>Energy Class B — regenerative drive</td></tr>
+            </table>
+            <ul class="feature-list">
+              <li><i class="fas fa-check" aria-hidden="true"></i> No separate machine room — saves 8–10 sqm</li>
+              <li><i class="fas fa-check" aria-hidden="true"></i> Regenerative drive returns energy to grid</li>
+              <li><i class="fas fa-check" aria-hidden="true"></i> Below 55 dB operation — whisper quiet</li>
+              <li><i class="fas fa-check" aria-hidden="true"></i> Ideal for buildings up to 30 floors</li>
+              <li><i class="fas fa-check" aria-hidden="true"></i> Reduced pit depth — minimal civil work</li>
+            </ul>
+            <div class="product-btns">
+              <button class="btn btn-primary" onclick="showPage('contact')">Get Quote <i class="fas fa-arrow-right" aria-hidden="true"></i></button>
+              <a href="#" class="btn btn-outline"><i class="fas fa-file-pdf" aria-hidden="true"></i> Brochure</a>
+              <a href="https://wa.me/91XXXXXXXXXX" target="_blank" rel="noopener" class="btn btn-wa"><i class="fab fa-whatsapp" aria-hidden="true"></i> Inquire</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div><!-- end dark wrapper -->
+
+  <!-- Bottom CTA -->
+  <section class="section-pad-sm bg-dark" style="border-top:1px solid var(--border);text-align:center">
+    <div class="container" data-aos="fade-up">
+      <h3 style="font-size:1.6rem;margin-bottom:0.6rem">Not sure which elevator suits you?</h3>
+      <p style="color:var(--gray-text);margin-bottom:1.5rem">Our experts will assess your building and recommend the perfect solution — for free.</p>
+      <button class="btn btn-primary btn-lg" onclick="showPage('contact')">Contact Our Expert <i class="fas fa-arrow-right" aria-hidden="true"></i></button>
+    </div>
+  </section>
+</div><!-- /page-products -->
+
+<!-- ════════════════════════════════════════════
+     PAGE: SERVICES
+════════════════════════════════════════════ -->
+<div class="page" id="page-services">
+  <div class="page-hero">
+    <div class="page-hero-bg"></div>
+    <div class="page-hero-overlay"></div>
+    <div class="container page-hero-content">
+      <span class="eyebrow">WHAT WE OFFER</span>
+      <h1>Our Services</h1>
+      <p>End-to-end elevator solutions backed by 15 years of expertise.</p>
+    </div>
+  </div>
+
+  <div style="background:var(--dark-bg)">
+
+    <!-- 1. Installation -->
+    <div class="service-section">
+      <div class="container">
+        <div class="service-layout">
+          <div data-aos="fade-right">
+            <span class="eyebrow">SERVICE 01</span>
+            <h2 class="section-heading" style="font-size:2rem">Elevator Installation</h2>
+            <div class="divider-line"></div>
+            <p style="color:rgba(255,255,255,0.75);margin-bottom:1.5rem">Every Rado installation follows a rigorous, documented process ensuring structural integrity, code compliance, and smooth handover. We handle everything — from initial site survey to final certification.</p>
+            <div class="install-steps" aria-label="Installation process steps">
+              <div class="install-step">
+                <div class="step-num">1</div>
+                <div class="step-label">Site Survey</div>
+              </div>
+              <div class="install-step">
+                <div class="step-num">2</div>
+                <div class="step-label">Design &amp; Planning</div>
+              </div>
+              <div class="install-step">
+                <div class="step-num">3</div>
+                <div class="step-label">Civil Work</div>
+              </div>
+              <div class="install-step">
+                <div class="step-num">4</div>
+                <div class="step-label">Installation</div>
+              </div>
+              <div class="install-step">
+                <div class="step-num">5</div>
+                <div class="step-label">Testing &amp; QC</div>
+              </div>
+              <div class="install-step">
+                <div class="step-num">6</div>
+                <div class="step-label">Handover</div>
+              </div>
+            </div>
+            <div style="display:flex;gap:1.5rem;flex-wrap:wrap;margin:1.2rem 0">
+              <div><span class="eyebrow" style="font-size:0.6rem">Timeline</span><p style="font-size:0.9rem;color:#fff">4 – 8 weeks typical</p></div>
+              <div><span class="eyebrow" style="font-size:0.6rem">Warranty</span><p style="font-size:0.9rem;color:#fff">1 Year Comprehensive</p></div>
+            </div>
+            <button class="btn btn-primary" onclick="showPage('contact')">Get Installation Quote <i class="fas fa-arrow-right" aria-hidden="true"></i></button>
+          </div>
+          <div class="service-img-box" data-aos="fade-left"><img src="rado/Elevator Installation.jpg" alt=""></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 2. AMC -->
+    <div class="service-section">
+      <div class="container">
+        <div class="text-center" data-aos="fade-up" style="margin-bottom:1rem">
+          <span class="eyebrow">SERVICE 02</span>
+          <h2 class="section-heading" style="font-size:2rem">Annual Maintenance Contract (AMC)</h2>
+          <div class="divider-line center"></div>
+          <p class="section-sub" style="margin:0 auto">Protect your investment with a structured AMC plan. Choose the coverage that suits your building's needs.</p>
+        </div>
+        <div class="amc-grid">
+          <div class="amc-card" data-aos="fade-up">
+            <div class="amc-tier">BASIC</div>
+            <div class="amc-price"><sup>₹</sup>8,999</div>
+            <div class="amc-period">per elevator / year</div>
+            <ul class="amc-features">
+              <li><i class="fas fa-check" aria-hidden="true"></i> 2 scheduled visits per year</li>
+              <li><i class="fas fa-check" aria-hidden="true"></i> Lubrication &amp; adjustment</li>
+              <li><i class="fas fa-check" aria-hidden="true"></i> Response within 24 hours</li>
+              <li><i class="fas fa-check" aria-hidden="true"></i> Labour charges covered</li>
+              <li><i class="fas fa-times" style="color:#555" aria-hidden="true"></i> Parts not included</li>
+              <li><i class="fas fa-times" style="color:#555" aria-hidden="true"></i> No 24/7 support</li>
+            </ul>
+            <button class="btn btn-outline" onclick="showPage('contact')" style="width:100%">Get Basic AMC</button>
+          </div>
+          <div class="amc-card featured" data-aos="fade-up" data-aos-delay="100">
+            <div class="amc-badge">RECOMMENDED</div>
+            <div class="amc-tier">STANDARD</div>
+            <div class="amc-price"><sup>₹</sup>18,999</div>
+            <div class="amc-period">per elevator / year</div>
+            <ul class="amc-features">
+              <li><i class="fas fa-check" aria-hidden="true"></i> 4 scheduled visits per year</li>
+              <li><i class="fas fa-check" aria-hidden="true"></i> Full preventive maintenance</li>
+              <li><i class="fas fa-check" aria-hidden="true"></i> Response within 8 hours</li>
+              <li><i class="fas fa-check" aria-hidden="true"></i> Labour &amp; minor parts covered</li>
+              <li><i class="fas fa-check" aria-hidden="true"></i> Phone support 7 days</li>
+              <li><i class="fas fa-times" style="color:#555" aria-hidden="true"></i> Major parts extra</li>
+            </ul>
+            <button class="btn btn-gold" onclick="showPage('contact')" style="width:100%">Get Standard AMC</button>
+          </div>
+          <div class="amc-card" data-aos="fade-up" data-aos-delay="200">
+            <div class="amc-tier">COMPREHENSIVE</div>
+            <div class="amc-price"><sup>₹</sup>34,999</div>
+            <div class="amc-period">per elevator / year</div>
+            <ul class="amc-features">
+              <li><i class="fas fa-check" aria-hidden="true"></i> 6 scheduled visits per year</li>
+              <li><i class="fas fa-check" aria-hidden="true"></i> Full preventive maintenance</li>
+              <li><i class="fas fa-check" aria-hidden="true"></i> Response within 4 hours</li>
+              <li><i class="fas fa-check" aria-hidden="true"></i> All parts included (excl. cabin)</li>
+              <li><i class="fas fa-check" aria-hidden="true"></i> 24/7 emergency support</li>
+              <li><i class="fas fa-check" aria-hidden="true"></i> IoT remote monitoring</li>
+            </ul>
+            <button class="btn btn-primary" onclick="showPage('contact')" style="width:100%">Get Comprehensive</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 3. Repair -->
+    <div class="service-section">
+      <div class="container">
+        <div class="service-layout reverse">
+          <div data-aos="fade-left">
+            <span class="eyebrow">SERVICE 03</span>
+            <h2 class="section-heading" style="font-size:2rem;color:var(--accent)">24/7 Emergency Repair</h2>
+            <div class="divider-line"></div>
+            <p style="color:rgba(255,255,255,0.75);margin-bottom:1.5rem">Elevator failure doesn't wait for business hours — and neither do we. Our emergency response team is on call every hour of every day, 365 days a year, across all our service cities.</p>
+            <div class="emergency-cta">
+              <p style="font-size:0.8rem;color:var(--gray-text);font-family:'Montserrat',sans-serif;letter-spacing:0.1em;text-transform:uppercase">Emergency Helpline</p>
+              <span class="emergency-number">+91 XXXXX XXXXX</span>
+              <p style="color:rgba(255,255,255,0.6);font-size:0.85rem;margin-top:0.5rem">Average on-site response: under 4 hours</p>
+              <button class="pulse-btn" onclick="window.location.href='tel:+91XXXXXXXXXX'">
+                <i class="fas fa-phone" aria-hidden="true"></i> Call Emergency Line
+              </button>
+            </div>
+            <div class="repair-issues" style="margin-top:2rem">
+              <div class="repair-issue"><i class="fas fa-exclamation-triangle" aria-hidden="true"></i> Door not closing/opening</div>
+              <div class="repair-issue"><i class="fas fa-exclamation-triangle" aria-hidden="true"></i> Elevator stuck between floors</div>
+              <div class="repair-issue"><i class="fas fa-exclamation-triangle" aria-hidden="true"></i> Unusual noises or jerks</div>
+              <div class="repair-issue"><i class="fas fa-exclamation-triangle" aria-hidden="true"></i> Control panel failure</div>
+              <div class="repair-issue"><i class="fas fa-exclamation-triangle" aria-hidden="true"></i> Power failure / ARD triggered</div>
+              <div class="repair-issue"><i class="fas fa-exclamation-triangle" aria-hidden="true"></i> Overload sensor issues</div>
+            </div>
+          </div>
+          <div class="service-img-box" data-aos="fade-right" style="background:linear-gradient(135deg,#1a0a0a,#2a0a0a)"><img src="rado/EmergencyRepair.jpg" alt=""></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 4. Modernization -->
+    <div class="service-section">
+      <div class="container">
+        <div class="service-layout">
+          <div data-aos="fade-right">
+            <span class="eyebrow">SERVICE 04</span>
+            <h2 class="section-heading" style="font-size:2rem">Modernization &amp; Upgrade</h2>
+            <div class="divider-line"></div>
+            <p style="color:rgba(255,255,255,0.75);margin-bottom:1.5rem">Is your elevator aging, noisy, or inefficient? Our modernization service brings it up to current safety standards, dramatically reduces energy consumption, and transforms the passenger experience — without replacing the entire system.</p>
+            <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:1rem;margin-bottom:2rem;text-align:center">
+              <div style="background:rgba(201,168,76,0.06);border:1px solid rgba(201,168,76,0.2);border-radius:8px;padding:1.2rem">
+                <span style="font-family:'Playfair Display',serif;font-size:2rem;font-weight:800;color:var(--gold)">40%</span>
+                <p style="font-size:0.75rem;color:var(--gray-text);margin-top:0.3rem">Energy Savings</p>
+              </div>
+              <div style="background:rgba(201,168,76,0.06);border:1px solid rgba(201,168,76,0.2);border-radius:8px;padding:1.2rem">
+                <span style="font-family:'Playfair Display',serif;font-size:2rem;font-weight:800;color:var(--gold)">2×</span>
+                <p style="font-size:0.75rem;color:var(--gray-text);margin-top:0.3rem">Lifespan Extended</p>
+              </div>
+              <div style="background:rgba(201,168,76,0.06);border:1px solid rgba(201,168,76,0.2);border-radius:8px;padding:1.2rem">
+                <span style="font-family:'Playfair Display',serif;font-size:2rem;font-weight:800;color:var(--gold)">100%</span>
+                <p style="font-size:0.75rem;color:var(--gray-text);margin-top:0.3rem">Safety Compliant</p>
+              </div>
+            </div>
+            <ul class="feature-list" style="margin-bottom:1.5rem">
+              <li><i class="fas fa-check" aria-hidden="true"></i> New VVVF controller &amp; drive system</li>
+              <li><i class="fas fa-check" aria-hidden="true"></i> Digital display &amp; smart panel replacement</li>
+              <li><i class="fas fa-check" aria-hidden="true"></i> Cabin interior refurbishment</li>
+              <li><i class="fas fa-check" aria-hidden="true"></i> Door operator &amp; sensor upgrade</li>
+              <li><i class="fas fa-check" aria-hidden="true"></i> All brands &amp; models supported</li>
+            </ul>
+            <button class="btn btn-primary" onclick="showPage('contact')">Get Modernization Assessment <i class="fas fa-arrow-right" aria-hidden="true"></i></button>
+          </div>
+          <div data-aos="fade-left">
+            <div class="comparison-container" id="comparisonSlider" aria-label="Before and after comparison">
+              <div class="comparison-before">
+                <img src="rado/afterwork.png" alt="">
+              </div>
+              <div class="comparison-after" id="comparisonAfter">
+                <img src="rado/liftunderconstruction.png" alt="">
+              </div>
+              <div class="comparison-label label-before">BEFORE</div>
+              <div class="comparison-label label-after">AFTER</div>
+              <div class="comparison-handle" id="comparisonHandle" role="slider" aria-label="Drag to compare before and after" aria-valuemin="0" aria-valuemax="100" aria-valuenow="50"></div>
+            </div>
+            <p style="font-size:0.8rem;color:var(--gray-text);text-align:center;margin-top:1rem"><i class="fas fa-arrows-left-right" aria-hidden="true"></i> Drag to compare before &amp; after</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div><!-- /page-services -->
+
+<!-- ════════════════════════════════════════════
+     PAGE: PROJECTS
+════════════════════════════════════════════ -->
+<div class="page" id="page-projects">
+  <div class="page-hero">
+    <div class="page-hero-bg"></div>
+    <div class="page-hero-overlay"></div>
+    <div class="container page-hero-content">
+      <span class="eyebrow">OUR PORTFOLIO</span>
+      <h1>Projects Gallery</h1>
+      <p>500+ successful installations across India — see the Rado difference.</p>
+    </div>
+  </div>
+
+  <section class="section-pad bg-dark">
+    <div class="container">
+      <div class="projects-filter" data-aos="fade-up">
+        <button class="filter-btn active" onclick="filterProjectsFull(this,'all')">All Projects</button>
+        <button class="filter-btn" onclick="filterProjectsFull(this,'residential')">Residential</button>
+        <button class="filter-btn" onclick="filterProjectsFull(this,'commercial')">Commercial</button>
+        <button class="filter-btn" onclick="filterProjectsFull(this,'hotels')">Hotels</button>
+        <button class="filter-btn" onclick="filterProjectsFull(this,'hospitals')">Hospitals</button>
+        <button class="filter-btn" onclick="filterProjectsFull(this,'industrial')">Industrial</button>
+      </div>
+
+      <div class="projects-grid" id="fullProjectsGrid" data-aos="fade-up">
+       
+      </div>
+
+      <div class="text-center" style="margin-top:3rem" data-aos="fade-up">
+        <h3 style="font-size:1.4rem;margin-bottom:0.6rem">Have a similar project requirement?</h3>
+        <p style="color:var(--gray-text);margin-bottom:1.5rem">Talk to our team — we'd love to work on your project.</p>
+        <button class="btn btn-primary btn-lg" onclick="showPage('contact')">Talk to Our Team <i class="fas fa-arrow-right" aria-hidden="true"></i></button>
+      </div>
+    </div>
+  </section>
+</div><!-- /page-projects -->
+
+<!-- ════════════════════════════════════════════
+     PAGE: CERTIFICATIONS
+════════════════════════════════════════════ -->
+<div class="page" id="page-certifications">
+  <div class="page-hero">
+    <div class="page-hero-bg"></div>
+    <div class="page-hero-overlay"></div>
+    <div class="container page-hero-content">
+      <span class="eyebrow">OUR CREDENTIALS</span>
+      <h1>Quality You Can Trust</h1>
+      <p>Every certificate represents our commitment to your safety.</p>
+    </div>
+  </div>
+
+  <section class="section-pad bg-dark">
+    <div class="container">
+      <div class="text-center" data-aos="fade-up">
+        <span class="eyebrow">CERTIFICATES</span>
+        <h2 class="section-heading">Our Certifications</h2>
+        <div class="divider-line center"></div>
+      </div>
+      <div class="cert-grid">
+        <div class="cert-card" data-aos="fade-up">
+          <span class="cert-icon"><i class="fas fa-award" aria-hidden="true"></i></span>
+          <h3>ISO 9001:2015</h3>
+          <p>Quality Management System certification — ensuring consistent, documented quality across all our processes and installations.</p>
+        </div>
+        <div class="cert-card" data-aos="fade-up" data-aos-delay="100">
+          <span class="cert-icon"><i class="fas fa-shield-alt" aria-hidden="true"></i></span>
+          <h3>BIS Certification</h3>
+          <p>Bureau of Indian Standards certification confirming our products and processes meet national standards and specifications.</p>
+        </div>
+        <div class="cert-card" data-aos="fade-up" data-aos-delay="200">
+          <span class="cert-icon"><i class="fas fa-check-double" aria-hidden="true"></i></span>
+          <h3>IS 14665 Compliance</h3>
+          <p>Full compliance with Indian Standards IS 14665 for electric traction lifts — the baseline safety standard for Indian elevators.</p>
+        </div>
+        <div class="cert-card" data-aos="fade-up" data-aos-delay="300">
+          <span class="cert-icon"><i class="fas fa-building" aria-hidden="true"></i></span>
+          <h3>Government Approved</h3>
+          <p>Registered and approved by state lift departments across all states in which we operate, with valid installation licenses.</p>
+        </div>
+        <div class="cert-card" data-aos="fade-up" data-aos-delay="400">
+          <span class="cert-icon"><i class="fas fa-fire-extinguisher" aria-hidden="true"></i></span>
+          <h3>Fire Safety Compliance</h3>
+          <p>All installations meet the National Building Code (NBC) fire safety provisions including fireman's lift requirements.</p>
+        </div>
+        <div class="cert-card" data-aos="fade-up" data-aos-delay="500">
+          <span class="cert-icon"><i class="fas fa-user-graduate" aria-hidden="true"></i></span>
+          <h3>Technician Certification</h3>
+          <p>All our engineers hold manufacturer and government-issued certifications, renewed annually through structured training.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Compliance List -->
+  <section class="section-pad-sm bg-dark" style="padding-top:0">
+    <div class="container">
+      <div data-aos="fade-up">
+        <span class="eyebrow">COMPLIANCE</span>
+        <h2 class="section-heading" style="font-size:1.8rem">Standards We Follow</h2>
+        <div class="divider-line"></div>
+      </div>
+      <div class="compliance-list">
+        <div class="compliance-item" data-aos="fade-up">
+          <div class="comp-icon"><i class="fas fa-ruler-combined" aria-hidden="true"></i></div>
+          <div class="comp-text"><h4>IS 14665 — Indian Elevator Standards</h4><p>All passenger and goods elevators comply with the mandatory Indian Standards for safety, dimensions, and loading.</p></div>
+        </div>
+        <div class="compliance-item" data-aos="fade-up">
+          <div class="comp-icon"><i class="fas fa-search" aria-hidden="true"></i></div>
+          <div class="comp-text"><h4>Annual Safety Audits by Certified Inspectors</h4><p>Every elevator in our AMC network undergoes a documented annual inspection by third-party certified lift inspectors.</p></div>
+        </div>
+        <div class="compliance-item" data-aos="fade-up">
+          <div class="comp-icon"><i class="fas fa-user-tie" aria-hidden="true"></i></div>
+          <div class="comp-text"><h4>Manufacturer-Certified Technicians</h4><p>Our engineers are trained and certified by original equipment manufacturers ensuring genuine expertise, not just experience.</p></div>
+        </div>
+        <div class="compliance-item" data-aos="fade-up">
+          <div class="comp-icon"><i class="fas fa-bolt" aria-hidden="true"></i></div>
+          <div class="comp-text"><h4>ARD — Automatic Rescue Device</h4><p>All installed elevators include ARD systems that automatically bring the elevator to the nearest floor during power failure.</p></div>
+        </div>
+        <div class="compliance-item" data-aos="fade-up">
+          <div class="comp-icon"><i class="fas fa-weight" aria-hidden="true"></i></div>
+          <div class="comp-text"><h4>Overload Sensors &amp; Door Safety</h4><p>Every elevator is fitted with calibrated overload protection sensors and infrared door safety edges as standard.</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Quality Promise -->
+  <section class="section-pad bg-dark" style="padding-top:0">
+    <div class="container">
+      <div class="quality-promise" data-aos="fade-up">
+        <span class="eyebrow">OUR PROMISE</span>
+        <div class="promise-number">47</div>
+        <p style="font-size:1.2rem;font-family:'Playfair Display',serif;margin:0.5rem 0 1rem">Point Safety Checklist</p>
+        <p style="color:rgba(255,255,255,0.65);max-width:560px;margin:0 auto 2.5rem;font-size:0.95rem">Every elevator we install undergoes a comprehensive 47-point safety verification before handover. No elevator leaves our team without a clean checklist.</p>
+        <div style="display:flex;gap:3rem;justify-content:center;flex-wrap:wrap">
+          <div style="text-align:center">
+            <div style="font-family:'Playfair Display',serif;font-size:2.5rem;font-weight:800;color:var(--gold)">0</div>
+            <div style="font-size:0.75rem;color:var(--gray-text);font-family:'Montserrat',sans-serif;letter-spacing:0.1em;text-transform:uppercase">Accidents on Record</div>
+          </div>
+          <div style="text-align:center">
+            <div style="font-family:'Playfair Display',serif;font-size:2.5rem;font-weight:800;color:var(--gold)">100%</div>
+            <div style="font-size:0.75rem;color:var(--gray-text);font-family:'Montserrat',sans-serif;letter-spacing:0.1em;text-transform:uppercase">Compliance Rate</div>
+          </div>
+          <div style="text-align:center">
+            <div style="font-family:'Playfair Display',serif;font-size:2.5rem;font-weight:800;color:var(--gold)">500+</div>
+            <div style="font-size:0.75rem;color:var(--gray-text);font-family:'Montserrat',sans-serif;letter-spacing:0.1em;text-transform:uppercase">Safe Installations</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div><!-- /page-certifications -->
+
+<!-- ════════════════════════════════════════════
+     PAGE: CONTACT
+════════════════════════════════════════════ -->
+<div class="page" id="page-contact">
+  <div class="page-hero" style="min-height:200px">
+    <div class="page-hero-bg"></div>
+    <div class="page-hero-overlay"></div>
+    <div class="container page-hero-content">
+      <span class="eyebrow">REACH OUT</span>
+      <h1>Contact Rado Elevators</h1>
+      <p>Free site survey and consultation — no obligation.</p>
+    </div>
+  </div>
+
+  <div class="contact-layout">
+    <!-- Left Panel -->
+    <div class="contact-left">
+      <div style="margin-bottom:2rem">
+        <div style="display:flex;align-items:center;gap:0.6rem;margin-bottom:0.5rem">
+          <div style="width:40px;height:40px;background:var(--crimson);border-radius:4px;display:flex;align-items:center;justify-content:center;font-family:'Playfair Display',serif;font-weight:800;font-size:1.4rem;color:var(--gold)">R</div>
+          <div>
+            <div style="font-family:'Montserrat',sans-serif;font-weight:700;font-size:1rem;letter-spacing:0.12em">RADO ELEVATORS</div>
+            <div style="font-family:'Montserrat',sans-serif;font-size:0.45rem;letter-spacing:0.2em;color:var(--gold)">WHERE SAFETY MEETS INNOVATION</div>
+          </div>
+        </div>
+      </div>
+      <h2 style="font-size:1.6rem;margin-bottom:0.4rem">Let's Build<br>Something Great</h2>
+      <p style="color:rgba(255,255,255,0.6);font-size:0.9rem;margin-bottom:2rem">Fill in the form and our team will respond within 2 business hours. Or reach us directly:</p>
+
+      <div class="contact-info-item">
+        <div class="ci-icon"><i class="fas fa-phone" aria-hidden="true"></i></div>
+        <div class="ci-text"><span>Phone</span><a href="tel:+918737867995"><strong>+91 87378 67995</strong></a></div>
+      </div>
+      <div class="contact-info-item">
+        <div class="ci-icon"><i class="fab fa-whatsapp" aria-hidden="true"></i></div>
+        <div class="ci-text"><span>WhatsApp</span><a href="https://wa.me/918737867995" target="_blank" rel="noopener"><strong>+91 87378 67995</strong></a></div>
+      </div>
+      <div class="contact-info-item">
+        <div class="ci-icon"><i class="fas fa-envelope" aria-hidden="true"></i></div>
+        <div class="ci-text"><span>Email</span><a href="mailto:sales@radoelevators.com"><strong>sales@radoelevators.com</strong></a></div>
+      </div>
+      <div class="contact-info-item">
+        <div class="ci-icon"><i class="fas fa-map-marker-alt" aria-hidden="true"></i></div>
+        <div class="ci-text"><span>Office</span><strong>Hazratganj,Lucknow UP, India</strong></div>
+      </div>
+      <div class="contact-info-item">
+        <div class="ci-icon"><i class="fas fa-clock" aria-hidden="true"></i></div>
+        <div class="ci-text"><span>Hours</span><strong>Mon – Sat: 9AM – 7PM &nbsp;|&nbsp; Emergency: 24/7</strong></div>
+      </div>
+
+      <div class="social-links">
+        <a href="#" class="social-link" aria-label="Instagram"><i class="fab fa-instagram" aria-hidden="true"></i></a>
+        <a href="#" class="social-link" aria-label="Facebook"><i class="fab fa-facebook-f" aria-hidden="true"></i></a>
+        <a href="#" class="social-link" aria-label="LinkedIn"><i class="fab fa-linkedin-in" aria-hidden="true"></i></a>
+        <a href="#" class="social-link" aria-label="YouTube"><i class="fab fa-youtube" aria-hidden="true"></i></a>
+      </div>
+    </div>
+
+    <!-- Right Panel — Form -->
+    <div class="contact-right">
+      <div class="contact-form">
+        <h2>Request Free Quote</h2>
+        <p class="sub">We respond within 2 business hours.</p>
+        <form id="contactForm" novalidate>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="fullName">Full Name *</label>
+              <input type="text" id="fullName" name="fullName" placeholder="Your full name" required aria-required="true">
+            </div>
+            <div class="form-group">
+              <label for="phone">Phone Number *</label>
+              <input type="tel" id="phone" name="phone" placeholder="+91 XXXXX XXXXX" required aria-required="true">
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="email">Email Address</label>
+              <input type="email" id="email" name="email" placeholder="your@email.com">
+            </div>
+            <div class="form-group">
+              <label for="city">City / Location *</label>
+              <input type="text" id="city" name="city" placeholder="Your city" required aria-required="true">
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="service">Service Required *</label>
+            <select id="service" name="service" required aria-required="true">
+              <option value="">Select a service</option>
+              <option>Installation</option>
+              <option>AMC / Maintenance</option>
+              <option>Repair / Breakdown</option>
+              <option>Modernization</option>
+              <option>Other</option>
+            </select>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="elevType">Elevator Type</label>
+              <select id="elevType" name="elevType">
+                <option value="">Select type</option>
+                <option>Passenger Elevator</option>
+                <option>Home Elevator</option>
+                <option>Hospital Elevator</option>
+                <option>Freight / Goods</option>
+                <option>Capsule Elevator</option>
+                <option>MRL Elevator</option>
+                <option>Not Sure</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="buildType">Building Type</label>
+              <select id="buildType" name="buildType">
+                <option value="">Select type</option>
+                <option>Residential</option>
+                <option>Commercial</option>
+                <option>Hotel / Hospitality</option>
+                <option>Hospital / Healthcare</option>
+                <option>Industrial / Warehouse</option>
+                <option>Other</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="floors">Number of Floors</label>
+            <input type="number" id="floors" name="floors" placeholder="e.g. 10" min="1" max="200">
+          </div>
+          <div class="form-group">
+            <label for="message">Message / Requirements</label>
+            <textarea id="message" name="message" placeholder="Tell us about your project, specific requirements, timeline, etc."></textarea>
+          </div>
+          <button type="submit" class="form-submit">Submit Request →</button>
+          <div class="success-msg" id="successMsg" role="alert">
+            <i class="fas fa-check-circle" aria-hidden="true"></i> Thank you! We've received your request and will contact you within 2 business hours.
+          </div>
+          <p class="form-note"><i class="fas fa-lock" aria-hidden="true" style="color:var(--crimson)"></i> Your information is secure and will never be shared.</p>
+        </form>
+      </div>
+
+      <!-- Map placeholder -->
+      <div class="map-placeholder" aria-label="Office location map">
+        <i class="fas fa-map-marked-alt" aria-hidden="true"></i>
+        <span>Rado Elevators — Hazratganj,Lucknow UP, India</span>
+        <span style="font-size:0.75rem">[Google Maps will be embedded here]</span>
+      </div>
+    </div>
+  </div>
+</div><!-- /page-contact -->
+
+<!-- ════════════════════════
+     GLOBAL FOOTER
+════════════════════════ -->
+<footer class="footer" role="contentinfo">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-logo">
+          <div class="logo-mark"><img src="rado/logo.jpg" alt=""></div>
+          <div>
+            <div style="font-family:'Montserrat',sans-serif;font-weight:700;font-size:0.95rem;letter-spacing:0.12em">RADO ELEVATORS</div>
+          </div>
+        </div>
+        <p class="tagline">WHERE SAFETY MEETS INNOVATION</p>
+        <p>Premium elevator installation, maintenance, and modernization across India. Trusted by 500+ projects in 50+ cities since 2009.</p>
+        <div class="footer-social">
+          <a href="https://www.instagram.com/rado_elevators?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" aria-label="Instagram"><i class="fab fa-instagram" aria-hidden="true"></i></a>
+          <a href="www.facebook.com/share/18NtV4uzYp" aria-label="Facebook"><i class="fab fa-facebook-f" aria-hidden="true"></i></a>
+          <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in" aria-hidden="true"></i></a>
+          <a href="#" aria-label="YouTube"><i class="fab fa-youtube" aria-hidden="true"></i></a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a onclick="showPage('home')">Home</a></li>
+          <li><a onclick="showPage('about')">About Us</a></li>
+          <li><a onclick="showPage('products')">Our Products</a></li>
+          <li><a onclick="showPage('services')">Services</a></li>
+          <li><a onclick="showPage('projects')">Projects</a></li>
+          <li><a onclick="showPage('certifications')">Certifications</a></li>
+          <li><a onclick="showPage('contact')">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Services</h4>
+        <ul>
+          <li><a onclick="showPage('services')">Elevator Installation</a></li>
+          <li><a onclick="showPage('services')">AMC / Maintenance</a></li>
+          <li><a onclick="showPage('services')">Modernization</a></li>
+          <li><a onclick="showPage('services')">24/7 Repair</a></li>
+          <li><a onclick="showPage('products')">Passenger Elevators</a></li>
+          <li><a onclick="showPage('products')">Home Elevators</a></li>
+          <li><a onclick="showPage('products')">Hospital Elevators</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <div class="footer-contact-item">
+          <i class="fas fa-phone" aria-hidden="true"></i>
+          <span>+91 8737867995</span>
+        </div>
+        <div class="footer-contact-item">
+          <i class="fab fa-whatsapp" aria-hidden="true"></i>
+          <span>+91 8737867995</span>
+        </div>
+        <div class="footer-contact-item">
+          <i class="fas fa-envelope" aria-hidden="true"></i>
+          <span>sales@radoelevators.com</span>
+        </div>
+        <div class="footer-contact-item">
+          <i class="fas fa-map-marker-alt" aria-hidden="true"></i>
+          <span>Hazratganj,Lucknow UP<br>India — 50+ Cities</span>
+        </div>
+        <div class="footer-contact-item">
+          <i class="fas fa-clock" aria-hidden="true"></i>
+          <span>Mon–Sat: 9AM–7PM<br>Emergency: 24/7</span>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2024 Rado Elevators. All rights reserved. Est. 2009.</p>
+      <div style="display:flex;gap:1.5rem">
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms of Service</a>
+        <a href="#">Sitemap</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- ════════════════════════
+     SCRIPTS
+════════════════════════ -->
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/countup.js@2.8.0/dist/countUp.umd.js"></script>
+
+<script>
+// ════════════════════════════════════
+// PRELOADER — ELEVATOR DOOR ANIMATION
+// ════════════════════════════════════
+window.addEventListener('load', function() {
+  const preloader = document.getElementById('preloader');
+  setTimeout(() => {
+    preloader.classList.add('doors-open');
+    // Show hero content
+    setTimeout(() => {
+      const heroContent = document.getElementById('heroContent');
+      if (heroContent) heroContent.classList.add('visible');
+    }, 200);
+    // Remove preloader
+    setTimeout(() => {
+      preloader.style.display = 'none';
+    }, 2200);
+  }, 800);
+});
+
+// ════════════════════════════════════
+// PAGE NAVIGATION
+// ════════════════════════════════════
+function showPage(pageId) {
+  // Hide all pages
+  document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
+  // Show target
+  const target = document.getElementById('page-' + pageId);
+  if (target) {
+    target.classList.add('active');
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+  // Update nav active states
+  document.querySelectorAll('.nav-links a').forEach(a => {
+    a.classList.toggle('active', a.dataset.page === pageId);
+  });
+  // Reinit AOS
+  setTimeout(() => { AOS.refresh(); }, 100);
+  // Reinit swiper if going to home
+  if (pageId === 'home') {
+    initSwipers();
+    initCounters();
+  }
+  // Update meta title
+  const titles = {
+    home: 'Rado Elevators | Elevator Installation, AMC & Repair India',
+    about: 'About Rado Elevators | 15+ Years Elevator Excellence',
+    products: 'Passenger, Home, Hospital & Freight Elevators | Rado',
+    services: 'Elevator Installation, AMC, Repair & Modernization | Rado',
+    projects: 'Elevator Projects Gallery | Residential & Commercial | Rado',
+    certifications: 'Certifications & Quality Standards | Rado Elevators',
+    contact: 'Contact Rado Elevators | Free Quote & Site Survey'
+  };
+  document.title = titles[pageId] || 'Rado Elevators';
+}
+
+// ════════════════════════════════════
+// NAVBAR SCROLL BEHAVIOR
+// ════════════════════════════════════
+window.addEventListener('scroll', function() {
+  const navbar = document.getElementById('navbar');
+  const backToTop = document.getElementById('backToTop');
+  if (window.scrollY > 60) {
+    navbar.classList.add('scrolled');
+    backToTop.classList.add('visible');
+  } else {
+    navbar.classList.remove('scrolled');
+    backToTop.classList.remove('visible');
+  }
+});
+
+// ════════════════════════════════════
+// MOBILE DRAWER
+// ════════════════════════════════════
+function toggleDrawer() {
+  const drawer = document.getElementById('mobileDrawer');
+  const overlay = document.getElementById('drawerOverlay');
+  const btn = document.getElementById('hamburgerBtn');
+  const isOpen = drawer.classList.toggle('open');
+  overlay.classList.toggle('show', isOpen);
+  btn.setAttribute('aria-expanded', isOpen);
+}
+
+// ════════════════════════════════════
+// SWIPER INIT
+// ════════════════════════════════════
+let elevatorsSwiper, testimonialsSwiper;
+function initSwipers() {
+  if (!elevatorsSwiper) {
+    elevatorsSwiper = new Swiper('.swiper-elevator', {
+      slidesPerView: 1,
+      spaceBetween: 24,
+      loop: true,
+      autoplay: { delay: 3000, pauseOnMouseEnter: true },
+      navigation: { nextEl: '.swiper-button-next', prevEl: '.swiper-button-prev' },
+      pagination: { el: '.swiper-pagination', clickable: true },
+      breakpoints: {
+        640: { slidesPerView: 2 },
+        1024: { slidesPerView: 3 },
+        1280: { slidesPerView: 4 }
+      }
+    });
+  }
+  if (!testimonialsSwiper) {
+    testimonialsSwiper = new Swiper('.swiper-testimonials', {
+      slidesPerView: 1,
+      spaceBetween: 24,
+      loop: true,
+      autoplay: { delay: 5000, pauseOnMouseEnter: true },
+      pagination: { el: '.swiper-pagination', clickable: true },
+      breakpoints: { 768: { slidesPerView: 2 }, 1024: { slidesPerView: 2 } }
+    });
+  }
+}
+
+// ════════════════════════════════════
+// COUNTUP ANIMATIONS
+// ════════════════════════════════════
+let countersStarted = false;
+function initCounters() {
+  if (countersStarted) return;
+  const countEls = document.querySelectorAll('.stat-number[data-count]');
+  if (!countEls.length) return;
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting && !countersStarted) {
+        countersStarted = true;
+        countEls.forEach(el => {
+          const target = parseInt(el.dataset.count);
+          const suffix = target === 100 ? '%' : '+';
+          if (window.CountUp) {
+            const cu = new CountUp.CountUp(el, target, { duration: 2.5, suffix: suffix });
+            cu.start();
+          } else {
+            el.textContent = target + suffix;
+          }
+        });
+      }
+    });
+  }, { threshold: 0.3 });
+  countEls.forEach(el => observer.observe(el));
+}
+
+// ════════════════════════════════════
+// PROJECT FILTERS (Home)
+// ════════════════════════════════════
+function filterProjects(btn, cat) {
+  document.querySelectorAll('.projects-filter .filter-btn').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+  const cards = document.querySelectorAll('#homeProjectsGrid .project-card');
+  cards.forEach(card => {
+    const match = cat === 'all' || card.dataset.category === cat;
+    card.style.display = match ? '' : 'none';
+  });
+}
+
+// Projects page filter
+function filterProjectsFull(btn, cat) {
+  document.querySelectorAll('#page-projects .filter-btn').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+  const cards = document.querySelectorAll('#fullProjectsGrid .project-card');
+  cards.forEach(card => {
+    const match = cat === 'all' || card.dataset.category === cat;
+    card.style.display = match ? '' : 'none';
+  });
+}
+
+// ════════════════════════════════════
+// COMPARISON SLIDER (Modernization)
+// ════════════════════════════════════
+function initComparisonSlider() {
+  const container = document.getElementById('comparisonSlider');
+  const after = document.getElementById('comparisonAfter');
+  const handle = document.getElementById('comparisonHandle');
+  if (!container) return;
+  let isDragging = false;
+  function setPos(x) {
+    const rect = container.getBoundingClientRect();
+    let pct = Math.min(Math.max(((x - rect.left) / rect.width) * 100, 5), 95);
+    after.style.clipPath = `inset(0 ${100-pct}% 0 0)`;
+    handle.style.left = pct + '%';
+    handle.setAttribute('aria-valuenow', Math.round(pct));
+  }
+  handle.addEventListener('mousedown', () => isDragging = true);
+  document.addEventListener('mousemove', e => { if (isDragging) setPos(e.clientX); });
+  document.addEventListener('mouseup', () => isDragging = false);
+  handle.addEventListener('touchstart', e => { isDragging = true; }, { passive: true });
+  document.addEventListener('touchmove', e => { if (isDragging && e.touches[0]) setPos(e.touches[0].clientX); }, { passive: true });
+  document.addEventListener('touchend', () => isDragging = false);
+  // Keyboard
+  handle.addEventListener('keydown', e => {
+    const rect = container.getBoundingClientRect();
+    const curPct = parseFloat(handle.style.left) || 50;
+    if (e.key === 'ArrowLeft') setPos(rect.left + (curPct - 5) / 100 * rect.width);
+    if (e.key === 'ArrowRight') setPos(rect.left + (curPct + 5) / 100 * rect.width);
+  });
+}
+
+// ════════════════════════════════════
+// CONTACT FORM
+// ════════════════════════════════════
+document.getElementById('contactForm')?.addEventListener('submit', function(e) {
+  e.preventDefault();
+  let valid = true;
+  ['fullName','phone','city','service'].forEach(id => {
+    const el = document.getElementById(id);
+    if (!el.value.trim()) {
+      el.classList.add('error-msg');
+      valid = false;
+    } else {
+      el.classList.remove('error-msg');
+    }
+  });
+  if (valid) {
+    document.getElementById('successMsg').style.display = 'block';
+    this.reset();
+    setTimeout(() => { document.getElementById('successMsg').style.display = 'none'; }, 6000);
+  }
+});
+
+// ════════════════════════════════════
+// PARTICLES CANVAS
+// ════════════════════════════════════
+(function() {
+  const canvas = document.getElementById('particles-canvas');
+  if (!canvas) return;
+  const ctx = canvas.getContext('2d');
+  let particles = [];
+  function resize() { canvas.width = window.innerWidth; canvas.height = window.innerHeight; }
+  resize();
+  window.addEventListener('resize', resize);
+  for (let i = 0; i < 40; i++) {
+    particles.push({
+      x: Math.random() * canvas.width,
+      y: canvas.height + Math.random() * canvas.height,
+      size: Math.random() * 2 + 0.5,
+      speed: Math.random() * 0.4 + 0.2,
+      opacity: Math.random() * 0.4 + 0.1
+    });
+  }
+  function animate() {
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    particles.forEach(p => {
+      p.y -= p.speed;
+      if (p.y < -10) { p.y = canvas.height + 10; p.x = Math.random() * canvas.width; }
+      ctx.beginPath();
+      ctx.arc(p.x, p.y, p.size, 0, Math.PI * 2);
+      ctx.fillStyle = `rgba(201,168,76,${p.opacity})`;
+      ctx.fill();
+    });
+    requestAnimationFrame(animate);
+  }
+  animate();
+})();
+
+// ════════════════════════════════════
+// AOS INIT
+// ════════════════════════════════════
+AOS.init({ duration: 700, easing: 'ease-out-cubic', once: true, offset: 60 });
+
+// ════════════════════════════════════
+// INIT ON LOAD
+// ════════════════════════════════════
+document.addEventListener('DOMContentLoaded', function() {
+  initSwipers();
+  initCounters();
+  initComparisonSlider();
+});
+
+// Service cards keyboard support
+document.querySelectorAll('.service-card').forEach(card => {
+  card.addEventListener('keydown', e => { if (e.key === 'Enter') card.click(); });
+});
+
+// Google Analytics placeholder
+// window.dataLayer = window.dataLayer || [];
+// function gtag(){dataLayer.push(arguments);}
+// gtag('js', new Date()); gtag('config', 'G-XXXXXXXXXX');
+
+
+</script>
+<script type="module">
+import { createClient } from 'https://cdn.jsdelivr.net/npm/@supabase/supabase-js/+esm'
+
+const supabaseUrl = 'https://ylkworwzibtatswmdebs.supabase.co'
+
+const supabaseKey = 'sb_publishable_e3_lkAQBmH8ntIlL6i0f_w_IRw4ym8I'
+
+const supabase = createClient(supabaseUrl, supabaseKey)
+
+window.supabase = supabase;
+
+console.log('Supabase Connected', supabase)
+
+// async function testDB() {
+//   const { data, error } = await supabase
+//     .from('projects')
+//     .select('*')
+
+//   console.log('DATA:', data)
+//   console.log('ERROR:', error)
+// }
+
+// testDB()
+async function loadProjects() {
+  const { data, error } = await window.supabase
+    .from('projects')
+    .select('*');
+
+  if (error) {
+    console.error(error);
+    return;
+  }
+
+  const html = data.map(project => `
+    <div class="project-card" data-category="${project.category}">
+      <div class="project-img">
+        <img src="${project.image_url}"
+             alt="${project.project_name}"
+             style="width:100%;height:100%;object-fit:cover;">
+      </div>
+
+      <div class="project-overlay">
+        <div class="project-info">
+          <h4>${project.project_name}</h4>
+          <span>${project.location}</span>
+        </div>
+      </div>
+    </div>
+  `).join('');
+
+  // Projects Page
+  const fullGrid = document.getElementById('fullProjectsGrid');
+  if (fullGrid) {
+    fullGrid.innerHTML = html;
+  }
+
+  // Home Page
+  const homeGrid = document.getElementById('homeProjectsGrid');
+  if (homeGrid) {
+    homeGrid.innerHTML = html;
+  }
+}
+
+loadProjects();
+</script>
+</body>
+</html>
+
+<!-- // database pass key @cherry372007@ -->

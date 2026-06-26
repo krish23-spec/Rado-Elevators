@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Admin Login</title>
+
+<style>
+
+body{
+display:flex;
+justify-content:center;
+align-items:center;
+height:100vh;
+background:#0f0f1a;
+font-family:Arial;
+}
+
+.box{
+
+width:350px;
+padding:40px;
+background:#171726;
+border-radius:15px;
+text-align:center;
+
+}
+
+h2{
+color:white;
+margin-bottom:25px;
+}
+
+input{
+
+width:100%;
+padding:14px;
+margin-bottom:15px;
+border:none;
+border-radius:8px;
+
+}
+
+button{
+
+width:100%;
+padding:14px;
+background:#c9a84c;
+border:none;
+font-size:18px;
+font-weight:bold;
+cursor:pointer;
+border-radius:8px;
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="box">
+
+<h2>Admin Login</h2>
+
+<input
+id="username"
+placeholder="Username">
+
+<input
+id="password"
+type="password"
+placeholder="Password">
+
+<button onclick="login()">
+
+Login
+
+</button>
+
+</div>
+
+<script>
+
+function login(){
+
+const username=document.getElementById("username").value;
+
+const password=document.getElementById("password").value;
+
+if(username==="admin" && password==="Rado123"){
+
+localStorage.setItem("admin","true");
+
+window.location.href="admin.html";
+
+}else{
+
+alert("Wrong Username or Password");
+
+}
+
+}
+
+</script>
+
+</body>
+
+</html>

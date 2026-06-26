@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="admin.css">
+  <title>Project Admin</title>
+</head>
+<body>
+<div class="dashboard">
+
+    <div class="card">
+        <div>
+            <h3 id="totalProjects">0</h3>
+            <span>Total Projects</span>
+        </div>
+        <div class="icon">📁</div>
+    </div>
+
+    <div class="card">
+        <div>
+            <h3 id="totalCategories">0</h3>
+            <span>Categories</span>
+        </div>
+        <div class="icon">🏢</div>
+    </div>
+
+    <div class="card">
+        <div>
+            <h3 id="totalImages">0</h3>
+            <span>Images</span>
+        </div>
+        <div class="icon">🖼️</div>
+    </div>
+
+</div>
+<h2>Add Project</h2>
+
+<form id="projectForm">
+  <input type="text" id="project_name" placeholder="Project Name" required>
+  <br><br>
+
+  <input type="text" id="location" placeholder="Location" required>
+  <br><br>
+
+  <select id="category">
+    <option value="residential">Residential</option>
+    <option value="commercial">Commercial</option>
+    <option value="hotels">Hotels</option>
+    <option value="hospitals">Hospitals</option>
+    <option value="industrial">Industrial</option>
+  </select>
+
+  <br><br>
+
+  <input type="file" id="image">
+
+  <br><br>
+
+  <textarea id="description" placeholder="Project Description"></textarea>
+
+<br><br>
+
+<img id="preview"
+     style="width:200px;height:120px;object-fit:cover;display:none;border-radius:10px;">
+
+  <button type="submit">Add Project</button>
+</form>
+
+<hr>
+
+<div class="table-header">
+
+    <h2>Projects List</h2>
+
+    <input
+        type="text"
+        id="searchProject"
+        placeholder="🔍 Search Project..."
+    >
+
+</div>
+
+<div id="projectsList"></div>
+
+<script>
+
+if(localStorage.getItem("admin") !== "true"){
+    window.location.href = "login.html";
+}
+
+</script>
+
+<script type="module">
+import { createClient } from 'https://cdn.jsdelivr.net/npm/@supabase/supabase-js/+esm'
+
+const supabase = createClient(
+  'https://ylkworwzibtatswmdebs.supabase.co',
+  'sb_publishable_e3_lkAQBmH8ntIlL6i0f_w_IRw4ym8I'
+);
+let projectsData = [];
+let editingId = null;
+
+document.getElementById('projectForm').addEventListener('submit', async (e) => {
+
+  e.preventDefault();
+
+  const file = document.getElementById('image').files[0];
+
+let imageUrl = "";
+
+if (file) {
+
+  const fileName = Date.now() + '-' + file.name;
+
+  const { error: uploadError } = await supabase.storage
+    .from('project-images')
+    .upload(fileName, file);
+
+  if (uploadError) {
+    console.error(uploadError);
+    return;
+  }
+
+  const { data } = supabase.storage
+    .from('project-images')
+    .getPublicUrl(fileName);
+
+  imageUrl = data.publicUrl;
+}
+
+const currentProject = editingId
+  ? projectsData.find(p => p.id === editingId)
+  : null;
+
+if (!imageUrl && currentProject) {
+  imageUrl = currentProject.image_url;
+}
+  // Save Database
+
+if (editingId !== null) {
+
+   console.log("UPDATE MODE", editingId);
+
+  const updateData = {
+    project_name: document.getElementById('project_name').value,
+    location: document.getElementById('location').value,
+    category: document.getElementById('category').value,
+    description: document.getElementById('description').value
+  };
+
+  // Agar nayi image select ki hai to wahi update karo
+  if (file) {
+    updateData.image_url = imageUrl;
+  }
+
+  const { error } = await supabase
+    .from('projects')
+    .update(updateData)
+    .eq('id', editingId);
+
+  if (error) {
+    console.error(error);
+    return;
+  }
+
+  editingId = null;
+
+  document.querySelector("#projectForm button").textContent = "Add Project";
+
+  alert("Project Updated Successfully");
+
+  document.getElementById("projectForm").reset();
+
+  preview.style.display = "none";
+  imageInput.value = "";
+
+preview.src = "";
+
+editingId = null;
+
+  loadProjectsList();
+
+  return;
+}
+
+  const { error } = await supabase
+    .from('projects')
+    .insert([
+    {
+      project_name: document.getElementById('project_name').value,
+      location: document.getElementById('location').value,
+      category: document.getElementById('category').value,
+      description: document.getElementById('description').value,
+      image_url: imageUrl
+    }
+    ]);
+
+  if(error){
+    console.error(error);
+    return;
+  }
+
+  alert('Project Added Successfully');
+
+  document.getElementById('projectForm').reset();
+});
+
+const imageInput = document.getElementById('image');
+const preview = document.getElementById('preview');
+
+imageInput.addEventListener('change', () => {
+  const file = imageInput.files[0];
+
+  if(file){
+    preview.src = URL.createObjectURL(file);
+    preview.style.display = 'block';
+  }
+});
+function renderProjects(data) {
+
+  const list = document.getElementById("projectsList");
+
+  list.innerHTML = data.map(project => `
+  
+  <div class="project-item">
+
+    <img src="${project.image_url}">
+
+    <div class="project-content">
+
+      <h3>${project.project_name}</h3>
+
+      <p>📍 ${project.location}</p>
+
+      <p>🏢 ${project.category}</p>
+
+      <p>${project.description}</p>
+
+      <div class="actions">
+
+        <button
+          class="edit-btn"
+          onclick="editProject(${project.id})">
+          ✏ Edit
+        </button>
+
+        <button
+          class="delete-btn"
+          onclick="deleteProject(${project.id})">
+          🗑 Delete
+        </button>
+
+      </div>
+
+    </div>
+
+  </div>
+
+  `).join("");
+
+}
+async function loadProjectsList() {
+
+  const { data, error } = await supabase
+    .from('projects')
+    .select('*');
+
+    projectsData = data;
+
+  if(error){
+    console.error(error);
+    return;
+  }
+
+  const list = document.getElementById('projectsList');
+  document.getElementById('totalProjects').innerHTML = data.length;
+
+document.getElementById('totalImages').innerHTML = data.length;
+
+const categories = [...new Set(data.map(p => p.category))];
+
+document.getElementById('totalCategories').innerHTML = categories.length;
+
+// list.innerHTML = data.map(project => `
+
+// // <div class="project-item">
+
+// // <img src="${project.image_url}">
+
+// // <div class="project-content">
+
+// // <h3>${project.project_name}</h3>
+
+// // <p>📍 ${project.location}</p>
+
+// // <p>🏢 ${project.category}</p>
+
+// // <p>${project.description}</p>
+
+// // <div class="actions">
+
+// // <button
+// // class="edit-btn"
+// // onclick="editProject(${project.id})">
+
+// // ✏ Edit
+
+// // </button>
+
+// // <button
+// // class="delete-btn"
+// // onclick="deleteProject(${project.id})">
+
+// // 🗑 Delete
+
+// // </button>
+
+// // </div>
+
+// // </div>
+
+// // `).join('');
+// }
+renderProjects(data);
+}
+
+loadProjectsList();
+
+window.editProject = async function(id) {
+
+    editingId = id;
+
+    const project = projectsData.find(p => p.id === id);
+
+    if (!project) return;
+
+    document.getElementById("project_name").value = project.project_name;
+    document.getElementById("location").value = project.location;
+    document.getElementById("category").value = project.category;
+    document.getElementById("description").value = project.description;
+
+    preview.src = project.image_url;
+    preview.style.display = "block";
+
+    document.querySelector("#projectForm button").innerHTML = "Update Project";
+
+    window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+    });
+
+}
+
+window.deleteProject = async function(id){
+
+const ok = confirm("Delete this project?");
+
+if(!ok) return;
+
+const {error} = await supabase
+.from("projects")
+.delete()
+.eq("id",id);
+
+if(error){
+
+console.error(error);
+
+return;
+
+}
+
+loadProjectsList();
+
+}
+
+document.getElementById("searchProject").addEventListener("input", function () {
+
+    const value = this.value.trim().toLowerCase();
+
+    const filtered = projectsData.filter(project => {
+
+        return (
+            project.project_name.toLowerCase().includes(value) ||
+            project.location.toLowerCase().includes(value) ||
+            project.category.toLowerCase().includes(value) ||
+            (project.description || "").toLowerCase().includes(value)
+        );
+
+    });
+
+    renderProjects(filtered);
+
+});
+
+</script>
+
+</body>
+</html>

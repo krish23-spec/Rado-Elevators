@@ -1,0 +1,358 @@
+:root{
+  --crimson:#8B1A1A;
+  --accent:#C41E3A;
+  --dark:#0F0F1A;
+  --card:#181826;
+  --gold:#C9A84C;
+  --white:#fff;
+  --gray:#9CA3AF;
+  --border:rgba(255,255,255,.08);
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Segoe UI,Tahoma,Geneva,Verdana,sans-serif;
+}
+
+body{
+    background:var(--dark);
+    color:var(--white);
+    padding:40px;
+}
+
+h2{
+    color:var(--gold);
+    margin-bottom:20px;
+}
+
+form{
+    background:var(--card);
+    padding:30px;
+    border-radius:18px;
+    border:1px solid var(--border);
+    box-shadow:0 15px 40px rgba(0,0,0,.35);
+    margin-bottom:40px;
+}
+
+input,
+select,
+textarea{
+
+    width:100%;
+    background:#101018;
+    color:white;
+
+    border:1px solid #2d2d3d;
+
+    padding:14px;
+
+    border-radius:12px;
+
+    font-size:15px;
+
+    margin-top:8px;
+}
+
+textarea{
+
+    height:120px;
+
+    resize:none;
+}
+
+input:focus,
+textarea:focus,
+select:focus{
+
+    outline:none;
+
+    border-color:var(--gold);
+}
+
+button{
+
+    margin-top:20px;
+
+    width:100%;
+
+    padding:15px;
+
+    border:none;
+
+    border-radius:12px;
+
+    cursor:pointer;
+
+    background:linear-gradient(90deg,var(--accent),var(--gold));
+
+    color:white;
+
+    font-size:17px;
+
+    font-weight:bold;
+
+    transition:.3s;
+}
+
+button:hover{
+
+    transform:translateY(-3px);
+
+    box-shadow:0 10px 25px rgba(0,0,0,.35);
+}
+
+#preview{
+
+    margin-top:20px;
+
+    border-radius:15px;
+
+    width:250px;
+
+    height:150px;
+
+    object-fit:cover;
+
+    border:2px solid var(--gold);
+}
+
+hr{
+
+    border:none;
+
+    border-top:1px solid var(--border);
+
+    margin:50px 0;
+}
+
+#projectsList{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fill,minmax(320px,1fr));
+
+    gap:25px;
+}
+
+.project-item{
+
+    background:var(--card);
+
+    border-radius:18px;
+
+    overflow:hidden;
+
+    border:1px solid var(--border);
+
+    transition:.3s;
+}
+
+.project-item:hover{
+
+    transform:translateY(-6px);
+
+    box-shadow:0 15px 40px rgba(0,0,0,.35);
+}
+
+.project-item img{
+
+    width:100%;
+
+    height:220px;
+
+    object-fit:cover;
+}
+
+.project-content{
+
+    padding:20px;
+}
+
+.project-content h3{
+
+    color:var(--gold);
+
+    margin-bottom:8px;
+}
+
+.project-content p{
+
+    color:var(--gray);
+
+    margin:6px 0;
+}
+
+
+/* dashbord card */
+
+.dashboard{
+
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:25px;
+
+    margin-bottom:35px;
+
+}
+
+.card{
+
+    background:linear-gradient(135deg,#181826,#11111b);
+
+    border:1px solid rgba(255,255,255,.08);
+
+    border-radius:18px;
+
+    padding:25px;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    transition:.3s;
+
+    box-shadow:0 10px 30px rgba(0,0,0,.25);
+
+}
+
+.card:hover{
+
+    transform:translateY(-6px);
+
+}
+
+.card h3{
+
+    font-size:40px;
+
+    color:var(--gold);
+
+    margin-bottom:8px;
+
+}
+
+.card span{
+
+    color:var(--gray);
+
+    font-size:15px;
+
+}
+
+.icon{
+
+    width:70px;
+
+    height:70px;
+
+    border-radius:15px;
+
+    background:linear-gradient(135deg,var(--accent),var(--gold));
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    font-size:32px;
+
+}
+
+/* project list serchbar  */
+
+.table-header{
+
+display:flex;
+
+justify-content:space-between;
+
+align-items:center;
+
+margin-bottom:25px;
+
+gap:20px;
+
+}
+
+.table-header input{
+
+width:320px;
+
+margin:0;
+
+}
+
+.actions{
+
+display:flex;
+
+gap:10px;
+
+margin-top:18px;
+
+}
+
+.edit-btn{
+
+background:#C9A84C;
+
+color:#111;
+
+padding:10px 18px;
+
+border-radius:8px;
+
+cursor:pointer;
+
+font-size:14px;
+
+font-weight:600;
+
+border:none;
+
+transition:.3s;
+
+}
+
+.edit-btn:hover{
+
+transform:translateY(-2px);
+
+}
+
+.delete-btn{
+
+background:#C41E3A;
+
+color:white;
+
+padding:10px 18px;
+
+border-radius:8px;
+
+cursor:pointer;
+
+font-size:14px;
+
+font-weight:600;
+
+border:none;
+
+transition:.3s;
+
+}
+
+.delete-btn:hover{
+
+transform:translateY(-2px);
+
+background:#8B1A1A;
+
+}
